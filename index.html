@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Deals Global — End-to-End Operator</title>
+  <meta name="description" content="End-to-end operator for custom production, commercial systems, and brand infrastructure.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    /* === RESET === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    /* === TOKENS === */
+    :root {
+      --bg:      #0a0a0a;
+      --surface: #0f0f0f;
+      --border:  #1d1d1d;
+      --text:    #ece9e4;
+      --muted:   #666;
+      --accent:  #C8913A;
+      --font-d:  'Cormorant Garamond', Georgia, serif;
+      --font-b:  'Barlow', system-ui, sans-serif;
+      --max:     1080px;
+      --px:      clamp(1.5rem, 5vw, 3.5rem);
+      --py:      clamp(4rem, 9vw, 8rem);
+    }
+
+    /* === BASE === */
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-b);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+
+    /* === LANGUAGE === */
+    body.lang-en .es { display: none; }
+    body.lang-es .en { display: none; }
+
+    /* === LAYOUT === */
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--px);
+    }
+    section { padding: var(--py) 0; }
+
+    /* === NAV === */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.93);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1.1rem 0;
+    }
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+    }
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      gap: 0.3rem;
+    }
+    .logo-name {
+      font-family: var(--font-d);
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: 0.14em;
+      color: var(--text);
+    }
+    .logo-sub {
+      font-family: var(--font-b);
+      font-weight: 400;
+      font-size: 0.52rem;
+      letter-spacing: 0.32em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* Lang toggle */
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .lang-btn {
+      background: none;
+      border: none;
+      font-family: var(--font-b);
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      padding: 0.2rem 0;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+    .lang-btn.active { color: var(--accent); }
+    .lang-btn:hover:not(.active) { color: var(--text); }
+    .lang-pipe { color: var(--border); font-size: 0.9rem; line-height: 1; user-select: none; }
+
+    /* === SECTION LABEL === */
+    .label {
+      font-family: var(--font-b);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.1rem;
+    }
+
+    /* === HEADINGS === */
+    h1, h2 {
+      font-family: var(--font-d);
+      font-weight: 500;
+      line-height: 1.13;
+      color: var(--text);
+    }
+    h1 { font-size: clamp(2.6rem, 5.5vw, 5rem); }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 1.5rem; }
+
+    /* === HERO === */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 55% at 20% 85%, rgba(200,145,58,0.07) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .hero .wrap { position: relative; z-index: 1; padding-top: var(--py); padding-bottom: var(--py); }
+    .hero h1 {
+      max-width: 17ch;
+      margin-bottom: 1.75rem;
+      animation: rise 0.9s cubic-bezier(.22,1,.36,1) both;
+    }
+    .hero .subline {
+      font-size: clamp(0.88rem, 1.4vw, 1.05rem);
+      color: var(--muted);
+      max-width: 52ch;
+      margin-bottom: 2.75rem;
+      font-weight: 300;
+      animation: rise 0.9s 0.13s cubic-bezier(.22,1,.36,1) both;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.82rem 2.1rem;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--font-b);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: background 0.22s, color 0.22s;
+      animation: rise 0.9s 0.26s cubic-bezier(.22,1,.36,1) both;
+    }
+    .btn:hover { background: var(--accent); color: var(--bg); }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* === WHAT WE DO === */
+    .section-what {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .what-body {
+      font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+      color: var(--muted);
+      max-width: 58ch;
+      line-height: 1.85;
+    }
+
+    /* === PROBLEMS === */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 2.5rem;
+    }
+    .problem-cell {
+      background: var(--bg);
+      padding: 1.75rem 1.5rem;
+      font-family: var(--font-d);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.3;
+    }
+
+    /* === HOW WE OPERATE === */
+    .section-how {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .steps {
+      list-style: none;
+      counter-reset: step;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem 2rem;
+      margin-top: 2.5rem;
+    }
+    .step { counter-increment: step; }
+    .step-num {
+      font-family: var(--font-d);
+      font-size: 1.9rem;
+      font-weight: 400;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.6rem;
+    }
+    .step-num::before { content: counter(step, decimal-leading-zero); }
+    .step span {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    /* === HOW WE ARE BUILT === */
+    .built-body {
+      font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+      color: var(--muted);
+      max-width: 56ch;
+      line-height: 1.85;
+      margin-bottom: 3.5rem;
+    }
+    .flow-wrap { max-width: 580px; }
+    .flow-wrap svg { width: 100%; height: auto; }
+
+    /* === CONTACT === */
+    .section-contact {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+    }
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.93rem;
+      transition: color 0.2s;
+    }
+    .contact-link:hover { color: var(--accent); }
+    .contact-link svg { flex-shrink: 0; opacity: 0.65; }
+
+    /* === FOOTER === */
+    footer {
+      padding: 1.75rem 0;
+      border-top: 1px solid var(--border);
+    }
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 var(--px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+    .footer-phrase {
+      letter-spacing: 0.14em;
+      font-size: 0.62rem;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .problems-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .problems-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-inner { flex-direction: column; gap: 0.6rem; text-align: center; }
+    }
+  </style>
+</head>
+
+<body class="lang-en">
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+
+      <a href="#" class="logo" aria-label="Prime Deals Global">
+        <!--
+          Logo mark: coordination hub.
+          Two square inputs feed into a single square output — the geometry of
+          end-to-end orchestration. Minimal. Geometric. Directed.
+        -->
+        <svg width="30" height="26" viewBox="0 0 30 26" fill="none"
+             xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="0" y="0"    width="7" height="7" fill="#C8913A"/>
+          <rect x="0" y="19"   width="7" height="7" fill="#C8913A"/>
+          <line x1="7"  y1="3.5"  x2="20" y2="13"   stroke="#C8913A" stroke-width="1.1"/>
+          <line x1="7"  y1="22.5" x2="20" y2="13"   stroke="#C8913A" stroke-width="1.1"/>
+          <rect x="23" y="9.5" width="7" height="7" fill="#C8913A"/>
+        </svg>
+        <div class="logo-text">
+          <span class="logo-name">PRIME DEALS</span>
+          <span class="logo-sub">Global</span>
+        </div>
+      </a>
+
+      <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button class="lang-btn active" id="btn-en"
+                onclick="setLang('en')" aria-pressed="true">EN</button>
+        <span class="lang-pipe" aria-hidden="true">|</span>
+        <button class="lang-btn" id="btn-es"
+                onclick="setLang('es')" aria-pressed="false">ES</button>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- ─── HERO ─── -->
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="label en" aria-hidden="true">End-to-end operator</p>
+      <p class="label es" aria-hidden="true">Operador integral</p>
+
+      <h1 id="hero-h">
+        <span class="en">We coordinate the process.<br>You receive the result.</span>
+        <span class="es">Nos encargamos de todo.<br>Tú recibes el producto.</span>
+      </h1>
+
+      <p class="subline">
+        <span class="en">End-to-end operator for custom production, commercial systems, and brand infrastructure.</span>
+        <span class="es">Operador integral de producción, sistemas comerciales e infraestructura de marca.</span>
+      </p>
+
+      <a href="#contact" class="btn">
+        <span class="en">Get in touch</span>
+        <span class="es">Contáctanos</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ─── WHAT WE DO ─── -->
+  <section class="section-what" id="what" aria-labelledby="what-h">
+    <div class="wrap">
+      <p class="label en">What we do</p>
+      <p class="label es">Qué hacemos</p>
+      <h2 id="what-h">
+        <span class="en">Absorbing complexity so you don't have to.</span>
+        <span class="es">Absorbemos la complejidad por ti.</span>
+      </h2>
+      <p class="what-body">
+        <span class="en">We absorb the complexity of custom production so our clients don't have to. From demand capture to final delivery — we coordinate scope, suppliers, production, quality, and fulfillment.</span>
+        <span class="es">Absorbemos la complejidad de la producción para que nuestros clientes no tengan que hacerlo. Desde la captura de demanda hasta la entrega final, coordinamos alcance, proveedores, producción, calidad y distribución.</span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ─── PROBLEMS WE SOLVE ─── -->
+  <section id="problems" aria-labelledby="problems-h">
+    <div class="wrap">
+      <p class="label en">Problems we solve</p>
+      <p class="label es">Problemas que resolvemos</p>
+      <h2 id="problems-h">
+        <span class="en">The friction we eliminate.</span>
+        <span class="es">La fricción que eliminamos.</span>
+      </h2>
+
+      <div class="problems-grid" role="list">
+        <div class="problem-cell" role="listitem">
+          <span class="en">Fragmented suppliers</span>
+          <span class="es">Proveedores fragmentados</span>
+        </div>
+        <div class="problem-cell" role="listitem">
+          <span class="en">Opaque pricing</span>
+          <span class="es">Precios sin claridad</span>
+        </div>
+        <div class="problem-cell" role="listitem">
+          <span class="en">No order visibility</span>
+          <span class="es">Sin visibilidad del pedido</span>
+        </div>
+        <div class="problem-cell" role="listitem">
+          <span class="en">Inconsistent quality</span>
+          <span class="es">Calidad inconsistente</span>
+        </div>
+        <div class="problem-cell" role="listitem">
+          <span class="en">Weak accountability</span>
+          <span class="es">Baja rendición de cuentas</span>
+        </div>
+        <div class="problem-cell" role="listitem">
+          <span class="en">High coordination cost</span>
+          <span class="es">Alto costo de coordinación</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── HOW WE OPERATE ─── -->
+  <section class="section-how" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <p class="label en">How we operate</p>
+      <p class="label es">Cómo operamos</p>
+      <h2 id="how-h">
+        <span class="en">A repeatable system.</span>
+        <span class="es">Un sistema repetible.</span>
+      </h2>
+
+      <ol class="steps" role="list">
+        <li class="step" role="listitem">
+          <div class="step-num" aria-hidden="true"></div>
+          <span class="en">Demand capture</span>
+          <span class="es">Captura de demanda</span>
+        </li>
+        <li class="step" role="listitem">
+          <div class="step-num" aria-hidden="true"></div>
+          <span class="en">Scope alignment</span>
+          <span class="es">Alineación de alcance</span>
+        </li>
+        <li class="step" role="listitem">
+          <div class="step-num" aria-hidden="true"></div>
+          <span class="en">Provider selection</span>
+          <span class="es">Selección de proveedor</span>
+        </li>
+        <li class="step" role="listitem">
+          <div class="step-num" aria-hidden="true"></div>
+          <span class="en">Production coordination</span>
+          <span class="es">Coordinación de producción</span>
+        </li>
+        <li class="step" role="listitem">
+          <div class="step-num" aria-hidden="true"></div>
+          <span class="en">Quality control</span>
+          <span class="es">Control de calidad</span>
+        </li>
+        <li class="step" role="listitem">
+          <div class="step-num" aria-hidden="true"></div>
+          <span class="en">Delivery &amp; feedback</span>
+          <span class="es">Entrega y retroalimentación</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ─── HOW WE ARE BUILT ─── -->
+  <section id="built" aria-labelledby="built-h">
+    <div class="wrap">
+      <p class="label en">How we are built</p>
+      <p class="label es">Cómo estamos construidos</p>
+      <h2 id="built-h">
+        <span class="en">Systems that learn.</span>
+        <span class="es">Sistemas que aprenden.</span>
+      </h2>
+      <p class="built-body">
+        <span class="en">We operate on proprietary systems built for demand coordination, provider orchestration, and production intelligence. No spreadsheets. No guesswork. A system that learns.</span>
+        <span class="es">Operamos sobre sistemas propios diseñados para coordinar demanda, orquestar proveedores e inteligencia de producción. Sin hojas de cálculo. Sin improvisación. Un sistema que aprende.</span>
+      </p>
+
+      <!-- Flow diagram: DEMAND → PRODUCTION → DELIVERY -->
+      <div class="flow-wrap" role="img"
+           aria-label="Three-stage flow: Demand to Production to Delivery">
+        <svg viewBox="0 0 576 72" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <!-- Node: DEMAND -->
+          <rect x="0.5"   y="20.5" width="139" height="31"
+                stroke="#C8913A" stroke-opacity="0.55"/>
+          <text x="70" y="41" text-anchor="middle"
+                font-family="Barlow,sans-serif" font-size="9.5"
+                font-weight="500" letter-spacing="3.5" fill="#C8913A">DEMAND</text>
+
+          <!-- Connector 1 -->
+          <line x1="140" y1="36" x2="202" y2="36"
+                stroke="#C8913A" stroke-opacity="0.35" stroke-width="1"/>
+          <path d="M197 30.5 L205 36 L197 41.5"
+                stroke="#C8913A" stroke-opacity="0.55" stroke-width="1" fill="none"/>
+
+          <!-- Node: PRODUCTION -->
+          <rect x="212.5" y="20.5" width="149" height="31"
+                stroke="#C8913A" stroke-opacity="0.55"/>
+          <text x="287" y="41" text-anchor="middle"
+                font-family="Barlow,sans-serif" font-size="9.5"
+                font-weight="500" letter-spacing="3.5" fill="#C8913A">PRODUCTION</text>
+
+          <!-- Connector 2 -->
+          <line x1="362" y1="36" x2="424" y2="36"
+                stroke="#C8913A" stroke-opacity="0.35" stroke-width="1"/>
+          <path d="M419 30.5 L427 36 L419 41.5"
+                stroke="#C8913A" stroke-opacity="0.55" stroke-width="1" fill="none"/>
+
+          <!-- Node: DELIVERY -->
+          <rect x="434.5" y="20.5" width="139" height="31"
+                stroke="#C8913A" stroke-opacity="0.55"/>
+          <text x="504" y="41" text-anchor="middle"
+                font-family="Barlow,sans-serif" font-size="9.5"
+                font-weight="500" letter-spacing="3.5" fill="#C8913A">DELIVERY</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── CONTACT ─── -->
+  <section class="section-contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <p class="label en">Contact</p>
+      <p class="label es">Contacto</p>
+      <h2 id="contact-h">
+        <span class="en">Ready to start? Let's talk.</span>
+        <span class="es">¿Listo para comenzar? Hablemos.</span>
+      </h2>
+
+      <div class="contact-links">
+        <a href="#" class="contact-link" aria-label="WhatsApp (coming soon)">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M9 1C4.582 1 1 4.582 1 9c0 1.42.37 2.752 1.02 3.908L1 17l4.092-1.02A7.953 7.953 0 009 17c4.418 0 8-3.582 8-8s-3.582-8-8-8z"
+                  stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+            <path d="M6.25 7.5c.4 1.1 1.6 2.8 3.5 3.5"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span>
+            WhatsApp &mdash;
+            <span class="en" style="color:var(--muted);">coming soon</span>
+            <span class="es" style="color:var(--muted);">próximamente</span>
+          </span>
+        </a>
+
+        <a href="mailto:contacto@primedeals.global" class="contact-link"
+           aria-label="Send email to contacto@primedeals.global">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+               xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="1" y="3.5" width="16" height="11" rx="1.5"
+                  stroke="currentColor" stroke-width="1.2"/>
+            <path d="M1 6l8 5 8-5"
+                  stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          <span>contacto@primedeals.global</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-inner">
+      <span>&copy; 2026 Prime Deals. All rights reserved.</span>
+      <span class="footer-phrase">
+        <span class="en">We take care of everything.</span>
+        <span class="es">Nos encargamos de todo.</span>
+      </span>
+    </div>
+  </footer>
+
+
+  <script>
+    function setLang(lang) {
+      document.body.className = 'lang-' + lang;
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').setAttribute('aria-pressed', String(lang === 'en'));
+      document.getElementById('btn-es').setAttribute('aria-pressed', String(lang === 'es'));
+      document.documentElement.lang = lang;
+    }
+  </script>
+
+</body>
+</html>
