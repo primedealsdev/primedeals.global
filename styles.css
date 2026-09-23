@@ -532,6 +532,7 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
     gap: 22px;
   }
   .hero-compact .titular { max-width: none; text-wrap: wrap; }
+  .hero-compact .subtitulo { max-width: none; }
   .hero.hero-home .titular { font-size: clamp(42px, 3.7vw, 50px); }
 
   /* Steps: 01 → 04 in one row */
