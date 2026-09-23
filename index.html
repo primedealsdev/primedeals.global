@@ -18,7 +18,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Prime Deals">
-<meta property="og:url" content="https://primedeals.global">
+<meta property="og:url" content="https://primedeals.global/">
 <meta property="og:title" content="Prime Deals — Indumentaria técnica para deportes de combate">
 <meta property="og:description" content="Indumentaria técnica para deportes de combate. Cada prenda se diseña, se confecciona y se entrega bajo un control absoluto. Un solo pedido. Ejecución total. Hecho en el Perú.">
 <meta property="og:image" content="https://primedeals.global/og.png">
@@ -146,7 +146,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;1,400&family=Geist:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
-
 <!-- Old English URL (/?lang=en) lives at /en/ now -->
 <script>
   if (new URLSearchParams(location.search).get('lang') === 'en') location.replace('/en/');
@@ -159,10 +158,15 @@
 <div class="shell">
 
   <header class="top fade-up">
-    <div class="mark" aria-label="primedeals.global">
+    <a class="mark" href="/" aria-label="primedeals.global">
       <span class="glyph" aria-hidden="true"></span>
       <span>primedeals<span class="dot">.</span>global</span>
-    </div>
+    </a>
+    <nav class="site-nav" aria-label="Sitio">
+      <a href="/" class="current" aria-current="page">Inicio</a>
+      <a href="/the-process.html">El Proceso</a>
+      <a href="/testimonials.html">Testimonios</a>
+    </nav>
     <div class="top-right">
       <div class="top-meta">EST · LIMA</div>
       <nav class="lang-toggle" aria-label="Idioma">
@@ -173,7 +177,6 @@
     </div>
   </header>
 
-  <!-- ESPAÑOL -->
   <main id="content-es">
     <section class="hero">
       <h1 class="titular fade-up d1">
@@ -204,14 +207,16 @@
       </div>
     </section>
 
-    <section class="clients fade-up d5" aria-label="Clientes">
-      <p class="clients-label">Nuestros socios</p>
-      <ul class="clients-list">
-        <li>Promotoras y organizaciones profesionales de deportes de combate.</li>
-        <li>Academias, gimnasios y asociaciones de entrenamiento.</li>
-        <li>Marcas de indumentaria de pelea que exigen un socio riguroso en Lima.</li>
-      </ul>
-    </section>
+    <nav class="page-links fade-up d5" aria-label="Explorar">
+      <a class="page-link" href="/the-process.html">
+        <span class="pl-title">El Proceso</span>
+        <span class="pl-sub">Cómo auditamos cada pedido →</span>
+      </a>
+      <a class="page-link" href="/testimonials.html">
+        <span class="pl-title">Testimonios</span>
+        <span class="pl-sub">Academias y marcas que confían en nosotros →</span>
+      </a>
+    </nav>
 
     <section class="cta fade-up d6" aria-label="Contacto">
       <div class="cta-text">
@@ -219,7 +224,7 @@
         <p class="sub">Un solo pedido. Ejecución total. Hecho en el Perú.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/51940934722" target="_blank" rel="noopener">
+        <a class="btn btn-primary" href="https://wa.me/51940934722?text=Hola%2C%20quiero%20hacer%20un%20pedido.%0AMarca%2Facademia%3A%20%0ACantidad%20aproximada%3A%20" target="_blank" rel="noopener">
           <span class="label-txt">Iniciar un pedido por WhatsApp</span>
           <span class="arrow" aria-hidden="true"></span>
         </a>

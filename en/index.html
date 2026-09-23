@@ -42,6 +42,106 @@
   gtag('config', 'G-66QY139D0X');
 </script>
 
+<!-- Schema Markup: Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Prime Deals",
+  "url": "https://primedeals.global",
+  "logo": "https://primedeals.global/favicon.svg",
+  "description": "B2B textile sourcing and fulfillment operator for combat sports academies, MMA gyms, and DTC activewear brands in Latin America and the United States.",
+  "foundingDate": "2025",
+  "foundingLocation": {
+    "@type": "City",
+    "name": "Lima",
+    "addressCountry": "PE"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Peru"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Latin America"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
+  "knowsAbout": [
+    "activewear manufacturing",
+    "rashguards",
+    "custom apparel",
+    "textile sourcing",
+    "combat sports gear",
+    "BJJ uniforms",
+    "MMA equipment"
+  ],
+  "slogan": "The order lifecycle does not change. We do.",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Sales",
+    "telephone": "+51-940-934-722",
+    "email": "info@primedeals.global"
+  }
+}
+</script>
+
+<!-- Schema Markup: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Prime Deals",
+  "url": "https://primedeals.global",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Lima",
+    "addressLocality": "Lima",
+    "addressCountry": "PE"
+  },
+  "telephone": "+51-940-934-722",
+  "email": "info@primedeals.global",
+  "areaServed": [
+    "PE",
+    "US",
+    "CO",
+    "CL",
+    "AR",
+    "EC"
+  ]
+}
+</script>
+
+<!-- Schema Markup: ServiceArea -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "B2B Textile Sourcing & Manufacturing",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Prime Deals",
+    "url": "https://primedeals.global"
+  },
+  "serviceArea": [
+    {
+      "@type": "Country",
+      "name": "Peru"
+    },
+    {
+      "@type": "Country",
+      "name": "United States"
+    }
+  ],
+  "areaServed": "Worldwide",
+  "description": "End-to-end design, production, inspection, and delivery of custom combat sports apparel and technical gear."
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;1,400&family=Geist:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -54,10 +154,15 @@
 <div class="shell">
 
   <header class="top fade-up">
-    <div class="mark" aria-label="primedeals.global">
+    <a class="mark" href="/en/" aria-label="primedeals.global">
       <span class="glyph" aria-hidden="true"></span>
       <span>primedeals<span class="dot">.</span>global</span>
-    </div>
+    </a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/en/" class="current" aria-current="page">Home</a>
+      <a href="/en/the-process.html">The Process</a>
+      <a href="/en/testimonials.html">Testimonials</a>
+    </nav>
     <div class="top-right">
       <div class="top-meta">EST · LIMA</div>
       <nav class="lang-toggle" aria-label="Language">
@@ -68,7 +173,6 @@
     </div>
   </header>
 
-  <!-- ENGLISH -->
   <main id="content-en">
     <section class="hero">
       <h1 class="titular fade-up d1">
@@ -99,14 +203,16 @@
       </div>
     </section>
 
-    <section class="clients fade-up d5" aria-label="Clients">
-      <p class="clients-label">Our Partners</p>
-      <ul class="clients-list">
-        <li>Professional combat sports promotions and organizations.</li>
-        <li>Established academies, gyms, and training associations.</li>
-        <li>Combat sports brands requiring a disciplined partner in Lima.</li>
-      </ul>
-    </section>
+    <nav class="page-links fade-up d5" aria-label="Explore">
+      <a class="page-link" href="/en/the-process.html">
+        <span class="pl-title">The Process</span>
+        <span class="pl-sub">How every order is audited →</span>
+      </a>
+      <a class="page-link" href="/en/testimonials.html">
+        <span class="pl-title">Testimonials</span>
+        <span class="pl-sub">Academies and brands who trust us →</span>
+      </a>
+    </nav>
 
     <section class="cta fade-up d6" aria-label="Contact">
       <div class="cta-text">
@@ -114,7 +220,7 @@
         <p class="sub">One order. Total execution. Made in Peru.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/51940934722" target="_blank" rel="noopener">
+        <a class="btn btn-primary" href="https://wa.me/51940934722?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order.%0ABrand%2Facademy%3A%20%0AEstimated%20quantity%3A%20" target="_blank" rel="noopener">
           <span class="label-txt">Begin an order on WhatsApp</span>
           <span class="arrow" aria-hidden="true"></span>
         </a>
