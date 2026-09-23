@@ -237,6 +237,10 @@ main { display: contents; }
   max-width: 46ch;
 }
 
+/* Label above the home pillars ("Nuestra promesa") */
+.hero.hero-home { border-bottom: 0; }
+.section-label { margin: 0 0 22px; }
+
 /* ── Clients ───────────────────────────────────────────── */
 .clients { padding: clamp(40px, 7vh, 72px) 0 clamp(8px, 2vh, 16px); }
 .clients-label {
@@ -523,6 +527,7 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
     gap: 22px;
   }
   .hero-compact .titular { max-width: none; text-wrap: wrap; }
+  .hero.hero-home .titular { font-size: clamp(42px, 3.7vw, 50px); }
 
   /* Steps: 01 → 04 in one row */
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); }
