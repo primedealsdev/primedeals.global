@@ -541,7 +541,7 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   .step:last-child { padding-right: 0; }
   .step h3 { font-size: 26px; }
   .step p { font-size: 15px; }
-  .process-coda { font-size: clamp(26px, 2.4vw, 32px); }
+  .process-coda { font-size: clamp(26px, 2.4vw, 32px); max-width: none; text-wrap: nowrap; }
 
   .testimonial { gap: 36px; padding: 44px 0; }
   .t-body blockquote { font-size: 19px; }
