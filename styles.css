@@ -361,7 +361,8 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 .page-link:hover .pl-sub { color: var(--accent); }
 
 /* ── Inner page head ───────────────────────────────────── */
-.hero-compact { border-bottom: 1px solid var(--line-soft); }
+.hero-compact { border-bottom: 1px solid var(--line-soft); gap: 18px; }
+.hero-compact .titular { max-width: 28ch; }
 
 /* ── Process steps ─────────────────────────────────────── */
 .steps { display: flex; flex-direction: column; }
@@ -515,10 +516,21 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   .top { flex-wrap: nowrap; }
   .site-nav { order: 0; width: auto; padding-top: 0; gap: 28px; margin: 0 auto; }
 
-  .steps { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(40px, 5vw, 90px); }
-  .step { padding: 40px 0; }
-  .step h3 { font-size: 28px; }
-  .step p { font-size: 15.5px; }
+  /* Inner page head: one column, title on one or two lines (not squeezed into the hero's right column) */
+  .hero-compact {
+    display: flex; flex-direction: column; align-items: flex-start;
+    padding: clamp(56px, 9vh, 96px) 0 clamp(44px, 7vh, 72px);
+    gap: 22px;
+  }
+  .hero-compact .titular { max-width: none; text-wrap: wrap; }
+
+  /* Steps: 01 → 04 in one row */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .step { padding: 36px clamp(22px, 2.2vw, 36px) 40px; border-bottom: 0; border-left: 1px solid var(--line-soft); }
+  .step:first-child { border-left: 0; padding-left: 0; }
+  .step:last-child { padding-right: 0; }
+  .step h3 { font-size: 26px; }
+  .step p { font-size: 15px; }
   .process-coda { font-size: clamp(26px, 2.4vw, 32px); }
 
   .testimonial { gap: 36px; padding: 44px 0; }
