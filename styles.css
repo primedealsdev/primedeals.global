@@ -296,6 +296,11 @@ main { display: contents; }
   margin: 0;
 }
 .actions { display: flex; flex-direction: column; gap: 12px; }
+/* Home: pillars already close with a line; don't stack a second one */
+.pillars + .cta { border-top: 0; margin-top: 0; }
+.cta-links { display: flex; flex-wrap: wrap; gap: 8px 28px; padding-top: 10px; }
+.cta-links a { color: var(--fg-mute); font-size: 14.5px; text-decoration: none; transition: color .2s ease; }
+.cta-links a:hover, .cta-links a:focus-visible { color: var(--accent); }
 .btn {
   display: inline-flex; align-items: center; justify-content: space-between;
   gap: 18px; width: 100%;
