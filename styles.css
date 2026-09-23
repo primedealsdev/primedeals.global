@@ -374,7 +374,6 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 .hero-compact .titular { max-width: 28ch; }
 /* Less empty space between the menu and the page title on phones and tablets */
 .hero.hero-compact { padding: clamp(28px, 5vh, 44px) 0 clamp(36px, 6vh, 56px); }
-.br-m { display: inline; }
 
 /* ── Process steps ─────────────────────────────────────── */
 .steps { display: flex; flex-direction: column; }
@@ -529,7 +528,6 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   .site-nav { order: 0; width: auto; padding-top: 0; gap: 28px; margin: 0 auto; }
 
   /* Inner page head: one column, title on one or two lines (not squeezed into the hero's right column) */
-  .br-m { display: none; }
   .hero.hero-compact {
     display: flex; flex-direction: column; align-items: flex-start;
     padding: clamp(56px, 9vh, 96px) 0 clamp(44px, 7vh, 72px);
