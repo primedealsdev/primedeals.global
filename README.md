@@ -1,56 +1,42 @@
-# primedeals.global — Despliegue del nuevo sitio
+# primedeals.global
 
-Paquete listo para reemplazar el sitio actual. Sube **los 3 archivos** a la
-raíz del dominio (donde hoy vive el `index.html` viejo) y reemplaza el existente.
+Static site for Prime Deals, served by GitHub Pages from `main` (custom domain in
+`CNAME`, HTTPS enforced). A merge to `main` is live in about a minute. There is no
+build step.
 
-## Contenido
+## Pages
 
-| Archivo        | Qué es                                              |
-|----------------|-----------------------------------------------------|
-| `index.html`   | La página completa (ES/EN, responsive). Es el sitio. |
-| `og.png`       | Imagen de previsualización social (1200×630).        |
-| `favicon.svg`  | Ícono de la pestaña del navegador.                   |
+| URL | Spanish file | English file |
+|---|---|---|
+| `/` | `index.html` | `en/index.html` (`/en/`) |
+| `/the-process` | `the-process.html` | `en/the-process.html` |
+| `/testimonials` | `testimonials.html` | `en/testimonials.html` |
+| any missing URL | `404.html` (bilingual, `noindex`) | |
 
-> Las tipografías (Cormorant Garamond, Geist, JetBrains Mono) se cargan desde
-> Google Fonts vía CDN — no hay que subir nada más. El sitio necesita conexión
-> a internet del visitante, como cualquier web normal.
+GitHub Pages serves `the-process.html` at `/the-process`. **Always link without
+`.html`**: nav links, `canonical`, `hreflang`, `og:url` and `sitemap.xml` all use
+the extensionless form.
 
-## Pasos para publicar
+## Shared files
 
-1. **Sube los 3 archivos a la raíz del sitio** (la carpeta pública del hosting:
-   `public_html/`, `www/`, `/`, o el origen de tu CDN/Netlify/Vercel).
-   Deben quedar accesibles como:
-   - `https://primedeals.global/`            → `index.html`
-   - `https://primedeals.global/og.png`      → imagen social
-   - `https://primedeals.global/favicon.svg` → ícono
-2. **Reemplaza** el `index.html` antiguo por el nuevo.
-3. Abre `https://primedeals.global` en el navegador y confirma que carga.
+- `styles.css`: the whole design system (tokens at the top of `:root`)
+- `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`: icons
+- `og.png`: link preview image (1200×630) used by every page
+- `og-image.jpg`: older preview image, kept so links shared before 2026-09 still get one
+- `images/testimonials/`: testimonial photos (480×480)
+- `robots.txt`, `sitemap.xml`
 
-## Importante: refrescar la previsualización de WhatsApp / redes
+## Adding or changing a page
 
-WhatsApp, Facebook y LinkedIn **cachean** la tarjeta del enlace. Si ya
-compartiste el link antes, seguirás viendo la versión vieja durante días.
-Para forzar la actualización después de publicar:
+1. Change the Spanish page and its `/en/` twin together. They mirror each other.
+2. Keep every SEO and preview tag in the static `<head>`. Crawlers and WhatsApp
+   previews don't run JavaScript.
+3. When a page is added, add it to `sitemap.xml` with its `hreflang` pair, and
+   update `lastmod`.
+4. After a copy change, refresh the WhatsApp/Facebook preview cache at
+   <https://developers.facebook.com/tools/debug/> ("Scrape Again").
 
-1. Entra a **https://developers.facebook.com/tools/debug/**
-2. Pega `https://primedeals.global`
-3. Clic en **"Scrape Again"** (Volver a extraer).
+## Contact details used on the site
 
-Eso regenera la tarjeta con el nuevo título, descripción e imagen `og.png`.
-
-## Datos de contacto ya configurados en el sitio
-
-- **WhatsApp:** +51 940 934 722 → `https://wa.me/51940934722`
-- **Correo:** info@primedeals.global
-
-## Si el dominio NO es `primedeals.global`
-
-Las meta tags y la URL canónica apuntan a `https://primedeals.global`.
-Si publicas en otro dominio, abre `index.html` y reemplaza todas las
-apariciones de `https://primedeals.global` por tu dominio real (están en las
-etiquetas `og:url`, `og:image`, `twitter:image` y `canonical`, en el `<head>`).
-
----
-
-¿Necesitas editar la imagen social? El archivo fuente es `og-card-source.html`
-(en la carpeta superior del proyecto): ábrelo, edítalo y vuelve a exportar.
+- WhatsApp: +51 940 934 722 (`https://wa.me/51940934722`)
+- Email: info@primedeals.global

@@ -336,6 +336,8 @@ footer {
 footer .domain { color: var(--fg-mute); }
 footer .sep { color: var(--line); }
 footer .spacer { flex: 1; }
+footer a { color: var(--fg-mute); text-decoration: none; transition: color .2s; }
+footer a:hover, footer a:focus-visible { color: var(--accent); }
 
 /* ── Page links (home → inner pages) ───────────────────── */
 .page-links {
