@@ -237,6 +237,10 @@ main { display: contents; }
   max-width: 46ch;
 }
 
+/* Label above the home pillars ("Nuestra promesa") */
+.hero.hero-home { border-bottom: 0; }
+.section-label { margin: 0 0 22px; }
+
 /* ── Clients ───────────────────────────────────────────── */
 .clients { padding: clamp(40px, 7vh, 72px) 0 clamp(8px, 2vh, 16px); }
 .clients-label {
@@ -292,6 +296,11 @@ main { display: contents; }
   margin: 0;
 }
 .actions { display: flex; flex-direction: column; gap: 12px; }
+/* Home: pillars already close with a line; don't stack a second one */
+.pillars + .cta { border-top: 0; margin-top: 0; }
+.cta-links { display: flex; flex-wrap: wrap; gap: 8px 28px; padding-top: 10px; }
+.cta-links a { color: var(--fg-mute); font-size: 14.5px; text-decoration: none; transition: color .2s ease; }
+.cta-links a:hover, .cta-links a:focus-visible { color: var(--accent); }
 .btn {
   display: inline-flex; align-items: center; justify-content: space-between;
   gap: 18px; width: 100%;
@@ -336,6 +345,8 @@ footer {
 footer .domain { color: var(--fg-mute); }
 footer .sep { color: var(--line); }
 footer .spacer { flex: 1; }
+footer a { color: var(--fg-mute); text-decoration: none; transition: color .2s; }
+footer a:hover, footer a:focus-visible { color: var(--accent); }
 
 /* ── Page links (home → inner pages) ───────────────────── */
 .page-links {
@@ -359,7 +370,11 @@ footer .spacer { flex: 1; }
 .page-link:hover .pl-sub { color: var(--accent); }
 
 /* ── Inner page head ───────────────────────────────────── */
-.hero-compact { border-bottom: 1px solid var(--line-soft); }
+.hero-compact { border-bottom: 1px solid var(--line-soft); gap: 18px; }
+.hero-compact .titular { max-width: 28ch; }
+/* Less empty space between the menu and the page title on phones and tablets */
+.hero.hero-compact { padding: clamp(28px, 5vh, 44px) 0 clamp(36px, 6vh, 56px); }
+.br-m { display: inline; }
 
 /* ── Process steps ─────────────────────────────────────── */
 .steps { display: flex; flex-direction: column; }
@@ -513,11 +528,25 @@ footer .spacer { flex: 1; }
   .top { flex-wrap: nowrap; }
   .site-nav { order: 0; width: auto; padding-top: 0; gap: 28px; margin: 0 auto; }
 
-  .steps { display: grid; grid-template-columns: 1fr 1fr; column-gap: clamp(40px, 5vw, 90px); }
-  .step { padding: 40px 0; }
-  .step h3 { font-size: 28px; }
-  .step p { font-size: 15.5px; }
-  .process-coda { font-size: clamp(26px, 2.4vw, 32px); }
+  /* Inner page head: one column, title on one or two lines (not squeezed into the hero's right column) */
+  .br-m { display: none; }
+  .hero.hero-compact {
+    display: flex; flex-direction: column; align-items: flex-start;
+    padding: clamp(56px, 9vh, 96px) 0 clamp(44px, 7vh, 72px);
+    gap: 22px;
+  }
+  .hero-compact .titular { max-width: none; text-wrap: balance; }
+  .hero-compact .subtitulo { max-width: none; }
+  .hero.hero-home .titular { font-size: clamp(42px, 3.7vw, 50px); }
+
+  /* Steps: 01 → 04 in one row */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .step { padding: 36px clamp(22px, 2.2vw, 36px) 40px; border-bottom: 0; border-left: 1px solid var(--line-soft); }
+  .step:first-child { border-left: 0; padding-left: 0; }
+  .step:last-child { padding-right: 0; }
+  .step h3 { font-size: 26px; }
+  .step p { font-size: 15px; }
+  .process-coda { font-size: clamp(26px, 2.4vw, 32px); max-width: none; text-wrap: nowrap; }
 
   .testimonial { gap: 36px; padding: 44px 0; }
   .t-body blockquote { font-size: 19px; }
