@@ -9,11 +9,13 @@ build step.
 | URL | Spanish file | English file |
 |---|---|---|
 | `/` | `index.html` | `en/index.html` (`/en/`) |
-| `/the-process` | `the-process.html` | `en/the-process.html` |
-| `/testimonials` | `testimonials.html` | `en/testimonials.html` |
+| `/el-proceso` | `el-proceso.html` | `en/the-process.html` (`/en/the-process`) |
+| `/testimonios` | `testimonios.html` | `en/testimonials.html` (`/en/testimonials`) |
 | any missing URL | `404.html` (bilingual, `noindex`) | |
 
-GitHub Pages serves `the-process.html` at `/the-process`. **Always link without
+Spanish URLs are in Spanish, English URLs in English. `the-process.html` and
+`testimonials.html` at the root are only redirects to the Spanish pages (those
+URLs were live briefly on 2026-09-23). GitHub Pages serves `el-proceso.html` at `/el-proceso`. **Always link without
 `.html`**: nav links, `canonical`, `hreflang`, `og:url` and `sitemap.xml` all use
 the extensionless form.
 
