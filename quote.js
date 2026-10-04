@@ -12,7 +12,8 @@
 
   var T = en ? {
     required: 'This field is required.',
-    quantity: 'Enter a whole number, 1 or more.',
+    quantity: 'Enter a whole number between 1 and 999999.',
+    past: 'Pick a date from today onwards.',
     contact: 'Enter a WhatsApp number or an email address.',
     url: 'Enter a link starting with http:// or https://.',
     intro: 'Hi, I\'d like a quote.',
@@ -21,7 +22,8 @@
     subject: 'Quote request: '
   } : {
     required: 'Este campo es obligatorio.',
-    quantity: 'Escribe un número entero, 1 o más.',
+    quantity: 'Escribe un número entero entre 1 y 999999.',
+    past: 'Elige una fecha desde hoy.',
     contact: 'Escribe un número de WhatsApp o un correo.',
     url: 'Escribe un enlace que empiece con http:// o https://.',
     intro: 'Hola, quiero una cotización.',
@@ -64,10 +66,12 @@
       if (!v) msg = T.required;
     } else if (name === 'quantity') {
       if (!v) msg = T.required;
-      else if (!/^\d+$/.test(v) || parseInt(v, 10) < 1) msg = T.quantity;
+      else if (!/^\d{1,6}$/.test(v) || parseInt(v, 10) < 1) msg = T.quantity;
     } else if (name === 'contact') {
       if (!v) msg = T.required;
-      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) && v.replace(/\D/g, '').length < 7) msg = T.contact;
+      else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) && !/^\+?[\d\s().-]{7,20}$/.test(v)) msg = T.contact;
+    } else if (name === 'deadline') {
+      if (v && v < fields.deadline.min) msg = T.past;
     } else if (name === 'files') {
       if (v && !/^https?:\/\/\S+$/i.test(v)) msg = T.url;
     }

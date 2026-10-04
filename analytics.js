@@ -81,11 +81,17 @@
       if (!en.isIntersecting) return;
       var s = sentinels.filter(function (x) { return x.el === en.target; })[0];
       if (!s || s.done) return;
-      if (root.scrollHeight <= window.innerHeight + 50) return;
       s.done = true;
       depthObserver.unobserve(s.el);
       track('scroll_depth', { percent: s.pct });
     });
   });
-  sentinels.forEach(function (s) { depthObserver.observe(s.el); });
+  // Start observing on the first real scroll, so short pages and pages that grow
+  // after load never report depth for a visitor who did not scroll.
+  window.addEventListener('scroll', function start() {
+    window.removeEventListener('scroll', start);
+    place();
+    if (root.scrollHeight <= window.innerHeight + 50) return;
+    sentinels.forEach(function (s) { depthObserver.observe(s.el); });
+  }, { passive: true });
 })();

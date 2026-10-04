@@ -33,6 +33,8 @@ const NAV = {
   en: { after: /(<a href="\/en\/testimonials"[^>]*>Testimonials<\/a>)/, link: '/en/gallery', label: 'Gallery' },
 };
 
+const touched = new Set();
+const routeOf = (f) => (f === 'index.html' ? '/' : f.endsWith('/index.html') ? '/' + f.slice(0, -10) : '/' + f.slice(0, -5));
 for (const p of walk(ROOT)) {
   const rel = relative(ROOT, p).split(sep).join('/');
   let s = readFileSync(p, 'utf8');
@@ -48,7 +50,7 @@ for (const p of walk(ROOT)) {
     const cur = isGallery ? ' class="current" aria-current="page"' : '';
     s = s.replace(n.after, `$1\n      <a href="${n.link}"${cur}>${n.label}</a>`);
   }
-  if (s !== before) writeFileSync(p, s);
+  if (s !== before) { writeFileSync(p, s); touched.add(rel); }
 }
 
 const today = new Date().toISOString().slice(0, 10);
@@ -64,6 +66,10 @@ if (!sm.includes(`${SITE}/galeria`)) {
   </url>\n`;
   sm = sm.replace('</urlset>', entry('/galeria') + entry('/en/gallery') + '</urlset>');
 }
-sm = sm.replace(/<lastmod>[^<]+<\/lastmod>/g, `<lastmod>${today}</lastmod>`);
+// Bump lastmod only for pages this run actually changed (their nav gained a link).
+for (const f of touched) {
+  const loc = SITE + routeOf(f);
+  sm = sm.replace(new RegExp(`(<loc>${loc.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}</loc>\\s*<lastmod>)[^<]+`), `$1${today}`);
+}
 writeFileSync(smPath, sm);
 console.log('Gallery published. Now run: node scripts/check-site.mjs');

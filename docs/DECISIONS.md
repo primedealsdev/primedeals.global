@@ -60,3 +60,8 @@ Choices made while building the growth and technical-SEO round (branch
 19. **Every `lastmod` is 2026-10-04**: every page changed (fonts, analytics, nav).
 20. **Generator not committed.** The new pages were written with a throwaway script; the
     repo has no build step and the HTML files are the source of truth.
+21. **Review follow-ups:** scroll depth waits for a real scroll; the quote form rejects past
+    deadlines, quantities over 999999 and malformed phone numbers; FAQPage answers have no
+    dangling link text; `publish-gallery.mjs` only bumps `lastmod` on pages it changed.
+    Left as is on purpose: `areaServed` includes the US (a Miami academy is a published
+    client), and consent stays `granted` by default as the brief asks.

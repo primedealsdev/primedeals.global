@@ -683,7 +683,7 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 .field input[aria-invalid="true"], .field select[aria-invalid="true"] { border-color: oklch(0.72 0.14 25); }
 .field select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--fg-mute) 50%), linear-gradient(135deg, var(--fg-mute) 50%, transparent 50%); background-position: calc(100% - 20px) 50%, calc(100% - 15px) 50%; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 40px; }
 .field-error { color: oklch(0.78 0.12 25); font-size: 13.5px; min-height: 0; margin: 0; }
-.field-error:empty { display: none; }
+.field-error:empty { margin-top: -8px; } /* stays in the tree so aria-live announces */
 .field-hint { color: var(--fg-faint); font-size: 13px; margin: 0; }
 .quote-form .btn { margin-top: 6px; font-family: var(--font-body); }
 .quote-result { padding: 30px 0; border-bottom: 1px solid var(--line-soft); display: flex; flex-direction: column; gap: 16px; }

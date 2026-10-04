@@ -13,7 +13,7 @@
 | `instagram_click` | click on any `a[href*="instagram.com"]` | `link_location` |
 | `language_switch` | click on the ES/EN toggle | `from`, `to`, `link_location` |
 | `cta_view` | the closing call-to-action is at least half visible (once per page) | `link_location` |
-| `scroll_depth` | 50% and 90% of the page height has entered the viewport (once each; skipped on pages that fit one screen) | `percent` |
+| `scroll_depth` | 50% and 90% of the page height has entered the viewport (once each; only starts counting after the visitor's first scroll; skipped on pages that fit one screen) | `percent` |
 | `quote_submit` | the quote form validated and the message was built | `product`, `quantity`, `has_deadline`, `has_design_link` |
 
 `link_location` is one of `header`, `footer`, `cta`, `testimonial`, `quote`, `body`.
