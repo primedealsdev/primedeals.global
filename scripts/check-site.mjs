@@ -265,6 +265,15 @@ for (const pg of Object.values(pages)) {
     }
   }
 
+  // no page may link to a hidden (noindex) content page, except itself and its own language twin
+  for (const { name, v } of refs) {
+    if (name !== 'a' || !v.startsWith('/')) continue;
+    const t = resolvePath(v.split('#')[0].split('?')[0]);
+    if (!t || t === f || !pages[t] || !pages[t].noindex || pages[t].stub || pages[t].is404) continue;
+    const twin = [...h.matchAll(/<link\s+rel="alternate"\s+hreflang="(?:es|en)"\s+href="([^"]+)"/gi)].map((m) => resolvePath(fromUrl(m[1]) || ''));
+    if (!twin.includes(t)) err(f, `links to hidden page ${v}`);
+  }
+
   // nav must not link to a hidden (noindex) page
   const nav = (h.match(/<nav class="site-nav"[\s\S]*?<\/nav>/) || [''])[0];
   for (const m of nav.matchAll(/href="([^"]+)"/g)) {
