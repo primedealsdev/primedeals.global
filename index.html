@@ -10,6 +10,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#171010">
 <link rel="canonical" href="https://primedeals.global/">
+<meta name="robots" content="max-image-preview:large">
 
 <meta name="description" content="Indumentaria técnica para deportes de combate. Cada prenda se diseña, se confecciona y se entrega bajo un control absoluto. Un solo pedido. Ejecución total. Hecho en el Perú.">
 
@@ -41,6 +42,15 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Analytics is granted by default (Peru / US audience).
+  // To serve the EU, change analytics_storage to 'denied' and call
+  // gtag('consent','update',{analytics_storage:'granted'}) once the visitor accepts.
+  gtag('consent', 'default', {
+    analytics_storage: 'granted',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-66QY139D0X');
 </script>
@@ -50,6 +60,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://primedeals.global/#organization",
   "name": "Prime Deals",
   "url": "https://primedeals.global/",
   "logo": "https://primedeals.global/apple-touch-icon.png",
@@ -68,10 +79,28 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Geist:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Schema Markup: WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://primedeals.global/#website",
+  "url": "https://primedeals.global/",
+  "name": "Prime Deals",
+  "inLanguage": [
+    "es",
+    "en"
+  ],
+  "publisher": {
+    "@id": "https://primedeals.global/#organization"
+  }
+}
+</script>
+
+<link rel="preload" href="/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
+<script src="/analytics.js" defer></script>
 <!-- Old English URL (/?lang=en) lives at /en/ now -->
 <script>
   if (new URLSearchParams(location.search).get('lang') === 'en') location.replace('/en/');
@@ -90,8 +119,12 @@
     </a>
     <nav class="site-nav" aria-label="Sitio">
       <a href="/" class="current" aria-current="page">Inicio</a>
+      <a href="/rashguards">Rashguards</a>
+      <a href="/kimonos">Kimonos</a>
+      <a href="/pantalonetas">Pantalonetas</a>
       <a href="/el-proceso">El Proceso</a>
       <a href="/testimonios">Testimonios</a>
+      <a href="/cotizar">Cotizar</a>
     </nav>
     <div class="top-right">
       <div class="top-meta">LIMA · PERÚ</div>
@@ -114,18 +147,35 @@
       </p>
     </section>
 
+    <p class="section-label eyebrow fade-up d2">Qué hacemos</p>
+    <nav class="page-links fade-up d2" aria-label="Productos">
+      <a class="page-link" href="/rashguards">
+        <span class="pl-title">Rashguards</span>
+        <span class="pl-sub">Con tu diseño o uno nuevo →</span>
+      </a>
+      <a class="page-link" href="/kimonos">
+        <span class="pl-title">Kimonos</span>
+        <span class="pl-sub">Para tu academia o tu marca →</span>
+      </a>
+      <a class="page-link" href="/pantalonetas">
+        <span class="pl-title">Pantalonetas</span>
+        <span class="pl-sub">Para entrenar y competir →</span>
+      </a>
+    </nav>
+    <p class="trust-line fade-up d3">Ya trabajamos con academias de jiu jitsu en Lima y Miami. <a href="/testimonios">Léelo en sus palabras →</a></p>
+
     <p class="section-label eyebrow fade-up d3">Nuestra promesa</p>
     <section class="pillars" aria-label="Pilares">
       <div class="pillar fade-up d3">
-        <h3>La tela.</h3>
+        <h2>La tela.</h2>
         <p>Hecha para el grappling: roce, sudor y años de uso.</p>
       </div>
       <div class="pillar fade-up d4">
-        <h3>La confección.</h3>
+        <h2>La confección.</h2>
         <p>Cada prenda se revisa antes de salir. El segundo pedido sale igual que el primero.</p>
       </div>
       <div class="pillar fade-up d5">
-        <h3>El tiempo.</h3>
+        <h2>El tiempo.</h2>
         <p>Una fecha dada es una fecha cumplida.</p>
       </div>
     </section>
@@ -149,6 +199,8 @@
           <a href="https://www.instagram.com/primedealsglobal/" target="_blank" rel="noopener">Ver trabajos <span aria-hidden="true">→</span></a>
           <a href="/el-proceso">Cómo trabajamos <span aria-hidden="true">→</span></a>
           <a href="/testimonios">Testimonios <span aria-hidden="true">→</span></a>
+          <a href="/preguntas-frecuentes">Preguntas frecuentes <span aria-hidden="true">→</span></a>
+          <a href="/cotizar">Cotizar <span aria-hidden="true">→</span></a>
         </nav>
       </div>
     </section>
@@ -162,6 +214,10 @@
     <a href="mailto:info@primedeals.global">Correo</a>
     <span class="sep">·</span>
     <a href="https://www.instagram.com/primedealsglobal/" target="_blank" rel="noopener">Instagram</a>
+    <span class="sep">·</span>
+    <a href="/preguntas-frecuentes">Preguntas frecuentes</a>
+    <span class="sep">·</span>
+    <a href="/cotizar">Cotizar</a>
     <span class="spacer"></span>
     <span>© 2026 Prime Deals</span>
   </footer>
