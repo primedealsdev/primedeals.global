@@ -6,7 +6,7 @@ In priority order, as of 2026-10-04. Detailed steps are in `docs/OWNER-TODO.md`.
 2. Search Console: verify the domain, submit `sitemap.xml`, request indexing of the new URLs.
 3. GA4: mark key events, register custom dimensions, link Search Console, create the audience.
 4. Instagram bio: switch to the UTM link (`docs/ANALYTICS.md`).
-5. Real answers: the six open FAQ questions and the rashguard and pantaloneta facts.
+5. Real answers: the six open FAQ questions and the rashguard and shorts/leggings facts.
 6. Six gallery photos, then `node scripts/publish-gallery.mjs`.
 7. Bing Webmaster Tools (import from Search Console).
 8. Google Business Profile (service-area business if there are no public premises).

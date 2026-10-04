@@ -11,7 +11,7 @@ build step.
 | `/` | `index.html` | `en/index.html` (`/en/`) |
 | `/rashguards` | `rashguards.html` | `en/rashguards.html` (`/en/rashguards`) |
 | `/kimonos` (parked: `noindex`, no nav, not in sitemap, not linked) | `kimonos.html` | `en/gis.html` (`/en/gis`) |
-| `/pantalonetas` | `pantalonetas.html` | `en/fight-shorts.html` (`/en/fight-shorts`) |
+| `/shorts-y-leggings` | `shorts-y-leggings.html` | `en/shorts-and-spats.html` (`/en/shorts-and-spats`) |
 | `/el-proceso` | `el-proceso.html` | `en/the-process.html` (`/en/the-process`) |
 | `/testimonios` | `testimonios.html` | `en/testimonials.html` (`/en/testimonials`) |
 | `/preguntas-frecuentes` | `preguntas-frecuentes.html` | `en/faq.html` (`/en/faq`) |
@@ -65,6 +65,7 @@ node scripts/publish-gallery.mjs && node scripts/check-site.mjs
 
 - `docs/ROADMAP.md`: what is next, in priority order
 - `docs/KIMONO.md`: **kimonos/gis are parked (possible product next year)**: state, what is missing, how to restore
+- `docs/TERMINOLOGY.md`: product names (tops/bottoms) and the words to use, in Spanish and English
 - `docs/OWNER-TODO.md`: things only the owner can do
 - `docs/ANALYTICS.md`: events, GA4 setup steps, UTM convention
 - `docs/DECISIONS.md`: choices made where the brief was ambiguous

@@ -70,3 +70,8 @@ Choices made while building the growth and technical-SEO round (branch
     fails if any page links to a hidden page. To bring them back: `git revert` the
     "park kimonos" commit, or follow `docs/KIMONO.md` (restores nav, sitemap, home, FAQ and form), then re-confirm the gi
     facts in `docs/OWNER-TODO.md`.
+23. **Product structure and names (tops / bottoms).** Tops: Rashguards, in short or long sleeve.
+    Bottoms: shorts, compression shorts and leggings, on one page `/shorts-y-leggings`
+    (`/en/shorts-and-spats`). The old "Pantalonetas" / "Fight shorts" pages were renamed before
+    going live, so there is no redirect to keep. The garment taxonomy comes from the owner;
+    the words come from the research in `docs/TERMINOLOGY.md`.

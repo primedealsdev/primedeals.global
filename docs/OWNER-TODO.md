@@ -16,8 +16,8 @@ Only things the owner can do, in priority order. Tick them off as you go.
       few minutes, click *Verify*.
 - [ ] *Sitemaps* → enter `sitemap.xml` → *Submit*.
 - [ ] *URL inspection* → paste each new URL below → *Request indexing* (about 10 a day is the cap):
-      `/rashguards`, `/pantalonetas`, `/preguntas-frecuentes`, `/cotizar`, then the
-      `/en/` twins (`/en/rashguards`, `/en/fight-shorts`, `/en/faq`, `/en/quote`).
+      `/rashguards`, `/shorts-y-leggings`, `/preguntas-frecuentes`, `/cotizar`, then the
+      `/en/` twins (`/en/rashguards`, `/en/shorts-and-spats`, `/en/faq`, `/en/quote`).
 
 ## 2. Bing Webmaster Tools
 
@@ -55,10 +55,10 @@ two disagree):
 
 Product pages (both languages), "Tela y confección" / "Cloth and construction":
 
-- [ ] Rashguards: fabric composition, print method, size range, sleeve/collar options, patches
+- [ ] Rashguards (manga corta y larga): fabric composition, print method, size range, collar/patch options
 - Kimonos: **parked, possible product next year.** Nothing to do now; the full list of what is
   missing and how to restore is in `docs/KIMONO.md`.
-- [ ] Pantalonetas: fabric and construction (waistband, slits), print method, sizes, kids?
+- [ ] Shorts y leggings (shorts, shorts de compresión, leggings): fabric and construction per garment, print method, sizes, kids?
 
 ## 6. Gallery photos (the gallery stays hidden until you supply these)
 
@@ -68,7 +68,7 @@ Replace each file in `images/gallery/` with a real photo **of the same name**, J
 - [ ] `slot-01-rashguard-front.jpg`: a finished custom rashguard, front, clean background
 - [ ] `slot-02-rashguard-mesh-panel-detail.jpg`: close-up of the side mesh panel
 - [ ] `slot-03-kids-rashguard.jpg`: a finished custom kids' rashguard
-- [ ] `slot-04-fight-shorts.jpg`: finished custom fight shorts
+- [ ] `slot-04-fight-shorts.jpg`: finished custom shorts, compression shorts or leggings
 - [ ] `slot-05-team-wearing-order.jpg`: an academy team wearing their order (get the coach's OK)
 - [ ] `slot-06-finish-detail.jpg`: stitching, label or finish detail
 
@@ -86,7 +86,7 @@ That removes `noindex`, adds the nav link and adds both pages to the sitemap.
 - [ ] Website `https://primedeals.global/?utm_source=google_business&utm_medium=profile&utm_campaign=gbp`;
       phone +51 940 934 722; link Instagram.
 - [ ] Description (ES): *Indumentaria técnica personalizada para deportes de combate: rashguards
-      y pantalonetas para academias y marcas. Un solo interlocutor, de la idea a la
+      shorts y leggings para academias y marcas. Un solo interlocutor, de la idea a la
       entrega. Hecho en el Perú.*
 - [ ] Description (EN): *Custom technical apparel for combat sports: rashguards and fight
       shorts for academies and brands. One point of contact, from idea to delivery. Made in Peru.*
@@ -102,8 +102,8 @@ That removes `noindex`, adds the nav link and adds both pages to the sitemap.
 ## 9. Refresh the link previews
 
 - [ ] <https://developers.facebook.com/tools/debug/> → paste each URL → *Scrape Again*:
-      `/`, `/en/`, `/rashguards`, `/en/rashguards`, `/pantalonetas`,
-      `/en/fight-shorts`, `/preguntas-frecuentes`, `/en/faq`, `/cotizar`, `/en/quote`,
+      `/`, `/en/`, `/rashguards`, `/en/rashguards`, `/shorts-y-leggings`,
+      `/en/shorts-and-spats`, `/preguntas-frecuentes`, `/en/faq`, `/cotizar`, `/en/quote`,
       `/el-proceso`, `/en/the-process`, `/testimonios`, `/en/testimonials`
       (all prefixed with `https://primedeals.global`).
 
