@@ -9,8 +9,11 @@
 | Bottom 2 | **Shorts de compresión** | **Compression shorts** | |
 | Bottom 3 | **Leggings** (calzas de compresión) | **Spats** (compression leggings) | BJJ spats, grappling tights |
 
-Pages: `/rashguards` ↔ `/en/rashguards`, and `/shorts-y-leggings` ↔ `/en/shorts-and-spats`
-(all three bottoms on one page until each has its own facts and photos).
+Pages: `/rashguards` ↔ `/en/rashguards`, and `/shorts` ↔ `/en/shorts`, at the same level in the
+nav and on the home page. The bottoms page is titled **Shorts**; its subtitle lists the three
+garments ("Shorts, shorts de compresión y leggings" / "Fight shorts, compression shorts and
+spats (leggings)"). All three share one page until each has its own facts and photos. The
+`<title>` and meta description keep the fuller keyword wording on purpose.
 
 ## Why not "pantalonetas"
 
@@ -25,7 +28,7 @@ The owner's draft used "pantalonetas" for leggings. Research (2026-10-04) says:
 
 So the site says **Shorts**, **Shorts de compresión** and **Leggings** (with "calzas de
 compresión" in the descriptive copy). If your customers in Lima really say "pantalonetas" for
-leggings, add it as a secondary word in the body copy of `shorts-y-leggings.html`, not in the
+leggings, add it as a secondary word in the body copy of `shorts.html`, not in the
 page title or navigation.
 
 Not verified: how Lima academies themselves say it. Ask two or three coaches and adjust.

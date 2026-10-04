@@ -16,8 +16,8 @@ Only things the owner can do, in priority order. Tick them off as you go.
       few minutes, click *Verify*.
 - [ ] *Sitemaps* → enter `sitemap.xml` → *Submit*.
 - [ ] *URL inspection* → paste each new URL below → *Request indexing* (about 10 a day is the cap):
-      `/rashguards`, `/shorts-y-leggings`, `/preguntas-frecuentes`, `/cotizar`, then the
-      `/en/` twins (`/en/rashguards`, `/en/shorts-and-spats`, `/en/faq`, `/en/quote`).
+      `/rashguards`, `/shorts`, `/preguntas-frecuentes`, `/cotizar`, then the
+      `/en/` twins (`/en/rashguards`, `/en/shorts`, `/en/faq`, `/en/quote`).
 
 ## 2. Bing Webmaster Tools
 
@@ -58,7 +58,7 @@ Product pages (both languages), "Tela y confección" / "Cloth and construction":
 - [ ] Rashguards (manga corta y larga): fabric composition, print method, size range, collar/patch options
 - Kimonos: **parked, possible product next year.** Nothing to do now; the full list of what is
   missing and how to restore is in `docs/KIMONO.md`.
-- [ ] Shorts y leggings (shorts, shorts de compresión, leggings): fabric and construction per garment, print method, sizes, kids?
+- [ ] Shorts (shorts, shorts de compresión, leggings): fabric and construction per garment, print method, sizes, kids?
 
 ## 6. Gallery photos (the gallery stays hidden until you supply these)
 
@@ -102,8 +102,8 @@ That removes `noindex`, adds the nav link and adds both pages to the sitemap.
 ## 9. Refresh the link previews
 
 - [ ] <https://developers.facebook.com/tools/debug/> → paste each URL → *Scrape Again*:
-      `/`, `/en/`, `/rashguards`, `/en/rashguards`, `/shorts-y-leggings`,
-      `/en/shorts-and-spats`, `/preguntas-frecuentes`, `/en/faq`, `/cotizar`, `/en/quote`,
+      `/`, `/en/`, `/rashguards`, `/en/rashguards`, `/shorts`,
+      `/en/shorts`, `/preguntas-frecuentes`, `/en/faq`, `/cotizar`, `/en/quote`,
       `/el-proceso`, `/en/the-process`, `/testimonios`, `/en/testimonials`
       (all prefixed with `https://primedeals.global`).
 
