@@ -68,5 +68,5 @@ Choices made while building the growth and technical-SEO round (branch
 22. **Kimonos/gis parked (not offered for now).** The pages stay in the repo as `noindex`, out of
     the nav, the sitemap, the home page, the FAQ, the quote form and the gallery. The checker
     fails if any page links to a hidden page. To bring them back: `git revert` the
-    "park kimonos" commit (restores nav, sitemap, home, FAQ and form), then re-confirm the gi
+    "park kimonos" commit, or follow `docs/KIMONO.md` (restores nav, sitemap, home, FAQ and form), then re-confirm the gi
     facts in `docs/OWNER-TODO.md`.

@@ -63,6 +63,8 @@ node scripts/publish-gallery.mjs && node scripts/check-site.mjs
 
 ## Docs
 
+- `docs/ROADMAP.md`: what is next, in priority order
+- `docs/KIMONO.md`: **kimonos/gis are parked (possible product next year)**: state, what is missing, how to restore
 - `docs/OWNER-TODO.md`: things only the owner can do
 - `docs/ANALYTICS.md`: events, GA4 setup steps, UTM convention
 - `docs/DECISIONS.md`: choices made where the brief was ambiguous

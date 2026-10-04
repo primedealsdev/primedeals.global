@@ -56,7 +56,8 @@ two disagree):
 Product pages (both languages), "Tela y confección" / "Cloth and construction":
 
 - [ ] Rashguards: fabric composition, print method, size range, sleeve/collar options, patches
-- Kimonos: parked, nothing to do until they are offered again.
+- Kimonos: **parked, possible product next year.** Nothing to do now; the full list of what is
+  missing and how to restore is in `docs/KIMONO.md`.
 - [ ] Pantalonetas: fabric and construction (waistband, slits), print method, sizes, kids?
 
 ## 6. Gallery photos (the gallery stays hidden until you supply these)
