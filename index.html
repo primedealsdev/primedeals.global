@@ -101,6 +101,7 @@
 <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
 <script src="/analytics.js" defer></script>
+<script src="/nav.js" defer></script>
 <!-- Old English URL (/?lang=en) lives at /en/ now -->
 <script>
   if (new URLSearchParams(location.search).get('lang') === 'en') location.replace('/en/');
@@ -119,12 +120,16 @@
     </a>
     <nav class="site-nav" aria-label="Sitio">
       <a href="/" class="current" aria-current="page">Inicio</a>
-      <a href="/rashguards">Rashguards</a>
-      <a href="/shorts">Shorts</a>
-      <a href="/galeria">Galería</a>
       <a href="/el-proceso">El Proceso</a>
+      <details class="nav-group">
+        <summary>Las prendas</summary>
+        <ul>
+          <li><a href="/rashguards">Rashguards</a></li>
+          <li><a href="/shorts">Shorts</a></li>
+          <li><a href="/galeria">Galería</a></li>
+        </ul>
+      </details>
       <a href="/testimonios">Testimonios</a>
-      <a href="/cotizar">Cotizar</a>
     </nav>
     <div class="top-right">
       <div class="top-meta">LIMA · PERÚ</div>

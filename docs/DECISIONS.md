@@ -35,8 +35,11 @@ Choices made while building the growth and technical-SEO round (branch
 ## Pages
 
 9. **Gallery** (superseded by 25): was built hidden with placeholders and a publish script.
-10. **Nav grew to 7 items.** Items wrap on phones, and the nav stays on its own row until
-    1320px (it used to sit inline from 1024px, which no longer fits).
+10. **Nav is four items** (superseded the 7-item version): Inicio, El Proceso, **Las prendas**
+    (Rashguards, Shorts, Galería) and Testimonios. The group is a native `<details>` dropdown
+    (works without JS, keyboard friendly; `nav.js` only closes it on outside click or Esc).
+    Cotizar and Preguntas frecuentes left the nav on purpose; they stay in the footer and in
+    the page CTAs.
 11. **Quote form:** works without a backend. On submit it validates, fires `quote_submit`,
     opens WhatsApp with the message, and shows the message with WhatsApp and email buttons
     (the fallback if the popup is blocked). Without JavaScript the form posts to `mailto:`.

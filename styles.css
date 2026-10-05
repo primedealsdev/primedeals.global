@@ -156,6 +156,35 @@ a.lang-opt:hover { color: var(--fg-mute); }
 .site-nav a:hover { color: var(--fg-mute); }
 .site-nav a.current { color: var(--accent); border-bottom-color: var(--accent); }
 
+/* Garments menu (native <details>) */
+.top { position: relative; z-index: 30; }
+.nav-group { position: relative; }
+.nav-group summary {
+  list-style: none; cursor: pointer;
+  font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--fg-faint); padding-bottom: 5px; border-bottom: 1px solid transparent;
+  display: inline-flex; align-items: center; gap: 8px;
+  transition: color .2s ease, border-color .2s ease;
+}
+.nav-group summary::-webkit-details-marker { display: none; }
+.nav-group summary::after {
+  content: ""; width: 5px; height: 5px; margin-top: -3px;
+  border-right: 1px solid currentColor; border-bottom: 1px solid currentColor; transform: rotate(45deg);
+  transition: transform .2s ease;
+}
+.nav-group[open] summary::after { transform: rotate(225deg); margin-top: 2px; }
+.nav-group summary:hover, .nav-group[open] summary { color: var(--fg-mute); }
+.nav-group summary.current { color: var(--accent); border-bottom-color: var(--accent); }
+.nav-group summary:focus-visible, .nav-group a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.nav-group ul {
+  position: absolute; top: calc(100% + 10px); left: -16px; z-index: 40;
+  list-style: none; margin: 0; padding: 8px 0; min-width: 200px;
+  background: var(--bg-soft); border: 1px solid var(--line); border-radius: 2px;
+  box-shadow: 0 14px 30px rgba(0,0,0,.35);
+}
+.site-nav .nav-group ul a { display: block; padding: 11px 18px; border-bottom: 0; }
+.site-nav .nav-group ul a:hover { color: var(--fg); }
+
 main { display: contents; }
 
 /* ── Section scaffolding ───────────────────────────────── */
@@ -523,6 +552,9 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   body { font-size: 17px; }
 
   /* Editorial hero: headline left, sidebar paragraph right (vertically centered) */
+  .top { flex-wrap: nowrap; }
+  .site-nav { order: 0; width: auto; padding-top: 0; gap: 28px; margin: 0 auto; }
+
   .hero {
     padding: clamp(80px, 15vh, 150px) 0 clamp(72px, 12vh, 120px);
     display: grid;
@@ -600,8 +632,6 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 }
 
 @media (min-width: 1320px) {
-  .top { flex-wrap: nowrap; }
-  .site-nav { order: 0; width: auto; padding-top: 0; gap: 28px; margin: 0 auto; }
   body { font-size: 18px; }
   .titular { font-size: clamp(52px, 4.2vw, 68px); }
 }

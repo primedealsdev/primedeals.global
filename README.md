@@ -31,6 +31,7 @@ the extensionless form.
 - `fonts/`: self-hosted latin woff2 (Cormorant Garamond, Geist, JetBrains Mono)
 - `analytics.js`: GA4 events (WhatsApp / email / Instagram clicks, language switch, CTA view,
   scroll depth). Included, deferred, on every real page. See `docs/ANALYTICS.md`
+- `nav.js`: closes the "Las prendas" / "Garments" menu on outside click or Esc
 - `quote.js`: the quote form (`/cotizar`): builds a WhatsApp message and a `mailto:` fallback
 - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`: icons
 - `og.png`: link preview image (1200×630) used by every page
