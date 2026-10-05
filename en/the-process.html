@@ -10,8 +10,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#171010">
 <link rel="canonical" href="https://primedeals.global/en/the-process">
+<meta name="robots" content="max-image-preview:large">
 
-<meta name="description" content="Four steps. One point of contact. Zero surprises. How Prime Deals manages every technical apparel order, from definition to delivery.">
+<meta name="description" content="Five steps. One point of contact. Zero surprises. How Prime Deals manages every technical apparel order, from definition to delivery.">
 
 <!-- Bilingual Routing -->
 <link rel="alternate" hreflang="es" href="https://primedeals.global/el-proceso">
@@ -23,7 +24,7 @@
 <meta property="og:site_name" content="Prime Deals">
 <meta property="og:url" content="https://primedeals.global/en/the-process">
 <meta property="og:title" content="The Process — Prime Deals">
-<meta property="og:description" content="Four steps. One point of contact. Zero surprises. How Prime Deals manages every technical apparel order, from definition to delivery.">
+<meta property="og:description" content="Five steps. One point of contact. Zero surprises. How Prime Deals manages every technical apparel order, from definition to delivery.">
 <meta property="og:image" content="https://primedeals.global/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -33,7 +34,7 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Process — Prime Deals">
-<meta name="twitter:description" content="Four steps. One point of contact. Zero surprises. How Prime Deals manages every technical apparel order, from definition to delivery.">
+<meta name="twitter:description" content="Five steps. One point of contact. Zero surprises. How Prime Deals manages every technical apparel order, from definition to delivery.">
 <meta name="twitter:image" content="https://primedeals.global/og.png">
 
 <!-- Google Analytics 4 -->
@@ -41,14 +42,45 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Analytics is granted by default (Peru / US audience).
+  // To serve the EU, change analytics_storage to 'denied' and call
+  // gtag('consent','update',{analytics_storage:'granted'}) once the visitor accepts.
+  gtag('consent', 'default', {
+    analytics_storage: 'granted',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-66QY139D0X');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Geist:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://primedeals.global/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "The Process",
+      "item": "https://primedeals.global/en/the-process"
+    }
+  ]
+}
+</script>
+
+<link rel="preload" href="/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
+<script src="/analytics.js" defer></script>
+<script src="/nav.js" defer></script>
 </head>
 <body>
 
@@ -63,7 +95,15 @@
     </a>
     <nav class="site-nav" aria-label="Site">
       <a href="/en/">Home</a>
-      <a href="/en/the-process" class="current" aria-current="page">The Process</a>
+      <a href="/en/the-process" class="current" aria-current="page">Process</a>
+      <details class="nav-group">
+        <summary>Garments</summary>
+        <ul>
+          <li><a href="/en/rashguards">Rashguards</a></li>
+          <li><a href="/en/shorts">Shorts</a></li>
+          <li><a href="/en/gallery">Gallery</a></li>
+        </ul>
+      </details>
       <a href="/en/testimonials">Testimonials</a>
     </nav>
     <div class="top-right">
@@ -79,7 +119,7 @@
   <main id="content-en">
     <section class="page-head hero-compact hero">
       <span class="eyebrow fade-up d1"><span class="pulse"></span>The Process</span>
-      <h1 class="titular fade-up d1">Four steps.<br>One point of contact.<br>Zero surprises.</h1>
+      <h1 class="titular fade-up d1">Five steps.<br>One point of contact.<br>Zero surprises.</h1>
       <p class="subtitulo fade-up d2">
         From first conversation to delivery.
       </p>
@@ -88,22 +128,27 @@
     <section class="steps" aria-label="Steps">
       <div class="step fade-up d2">
         <span class="step-num">01</span>
-        <h3>Scope</h3>
+        <h2>Scope</h2>
         <p>Quantities, specs, deadlines and budget. All in writing before we start.</p>
       </div>
       <div class="step fade-up d3">
         <span class="step-num">02</span>
-        <h3>Design</h3>
+        <h2>Design</h2>
         <p>Your design, or one we build together. We choose the best options within your budget. Price agreed before production.</p>
       </div>
       <div class="step fade-up d4">
         <span class="step-num">03</span>
-        <h3>Production</h3>
-        <p>We oversee production in Lima. Every piece is inspected. You get exactly what you approved.</p>
+        <h2>Production</h2>
+        <p>We oversee production in Lima, start to finish.</p>
       </div>
       <div class="step fade-up d5">
         <span class="step-num">04</span>
-        <h3>Delivery</h3>
+        <h2>Quality</h2>
+        <p>We check that every piece matches what you approved. If anything is off, it is fixed before it ships.</p>
+      </div>
+      <div class="step fade-up d5">
+        <span class="step-num">05</span>
+        <h2>Delivery</h2>
         <p>On the agreed date. No excuses. In your hands.</p>
       </div>
     </section>
@@ -138,6 +183,10 @@
     <a href="mailto:info@primedeals.global">Email</a>
     <span class="sep">·</span>
     <a href="https://www.instagram.com/primedealsglobal/" target="_blank" rel="noopener">Instagram</a>
+    <span class="sep">·</span>
+    <a href="/en/faq">FAQ</a>
+    <span class="sep">·</span>
+    <a href="/en/quote">Quote</a>
     <span class="spacer"></span>
     <span>© 2026 Prime Deals</span>
   </footer>

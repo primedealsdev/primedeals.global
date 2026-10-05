@@ -1,3 +1,7 @@
+# Everything public is crawlable (search engines and AI crawlers alike).
+# Hidden pages (gallery until it has real photos, redirect stubs, 404) are kept out
+# of the index with <meta name="robots" content="noindex">, which crawlers can only
+# see if they are allowed to fetch the page. So they are deliberately not disallowed here.
 User-agent: *
 Allow: /
 

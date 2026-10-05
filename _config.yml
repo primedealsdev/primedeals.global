@@ -1,0 +1,6 @@
+# GitHub Pages runs Jekyll by default. Keep repo-only files out of the published site.
+exclude:
+  - README.md
+  - docs
+  - scripts
+  - .github

@@ -10,6 +10,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#171010">
 <link rel="canonical" href="https://primedeals.global/en/testimonials">
+<meta name="robots" content="max-image-preview:large">
 
 <meta name="description" content="Trusted by the jiu jitsu community. Coaches and academies in Lima and Miami who already work with Prime Deals.">
 
@@ -41,14 +42,45 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2. Analytics is granted by default (Peru / US audience).
+  // To serve the EU, change analytics_storage to 'denied' and call
+  // gtag('consent','update',{analytics_storage:'granted'}) once the visitor accepts.
+  gtag('consent', 'default', {
+    analytics_storage: 'granted',
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied'
+  });
   gtag('js', new Date());
   gtag('config', 'G-66QY139D0X');
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Geist:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://primedeals.global/en/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Testimonials",
+      "item": "https://primedeals.global/en/testimonials"
+    }
+  ]
+}
+</script>
+
+<link rel="preload" href="/fonts/cormorant-garamond.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
+<script src="/analytics.js" defer></script>
+<script src="/nav.js" defer></script>
 </head>
 <body>
 
@@ -63,7 +95,15 @@
     </a>
     <nav class="site-nav" aria-label="Site">
       <a href="/en/">Home</a>
-      <a href="/en/the-process">The Process</a>
+      <a href="/en/the-process">Process</a>
+      <details class="nav-group">
+        <summary>Garments</summary>
+        <ul>
+          <li><a href="/en/rashguards">Rashguards</a></li>
+          <li><a href="/en/shorts">Shorts</a></li>
+          <li><a href="/en/gallery">Gallery</a></li>
+        </ul>
+      </details>
       <a href="/en/testimonials" class="current" aria-current="page">Testimonials</a>
     </nav>
     <div class="top-right">
@@ -87,7 +127,7 @@
 
     <section class="testimonials" aria-label="Testimonials">
       <div class="testimonial fade-up d2">
-        <div class="t-photo" aria-hidden="true"><img src="/images/testimonials/favoreto.jpg" alt="" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="t-photo"><img src="/images/testimonials/favoreto.jpg" alt="Desiree Favoreto, Head Coach &amp; Owner, Favoreto Escola de Jiu Jitsu · Miami, USA" width="480" height="480" loading="lazy" decoding="async"></div>
         <div class="t-body">
           <blockquote>&ldquo;Prime understood exactly what we wanted our academy to represent. From our kids' rashguards to our screen-printed t-shirts and a fully custom project, every piece reflected our identity. Their quality, communication, and commitment throughout the process made it an easy decision to continue working together.&rdquo;</blockquote>
           <div class="t-attr">
@@ -100,7 +140,7 @@
       </div>
 
       <div class="testimonial fade-up d2">
-        <div class="t-photo" aria-hidden="true"><img src="/images/testimonials/retamozo.jpg" alt="" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="t-photo"><img src="/images/testimonials/retamozo.jpg" alt="Francisco Retamozo, Jiu Jitsu Coach · Lima, Peru" width="480" height="480" loading="lazy" decoding="async"></div>
         <div class="t-body">
           <blockquote>&ldquo;I wanted a rashguard inspired by the octopus, a symbol that means a lot to me. Prime listened, challenged my ideas when needed, and helped bring my vision to life. The collection turned out exactly as I had imagined, and seeing my students wear it with pride has been incredibly rewarding.&rdquo;</blockquote>
           <div class="t-attr">
@@ -113,7 +153,7 @@
       </div>
 
       <div class="testimonial fade-up d3">
-        <div class="t-photo" aria-hidden="true"><img src="/images/testimonials/fernandez.jpg" alt="" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="t-photo"><img src="/images/testimonials/fernandez.jpg" alt="Alejandro Fernández, Head Coach &amp; Country Manager - Peru, Almeida Jiu Jitsu · Lima, Peru" width="480" height="480" loading="lazy" decoding="async"></div>
         <div class="t-body">
           <blockquote>&ldquo;I wasn't looking for another standard academy rashguard. I wanted something different. Prime introduced design details I hadn't seen anywhere else, including the lateral mesh panels, and the final product exceeded my expectations. It truly felt like a collaborative process from start to finish.&rdquo;</blockquote>
           <div class="t-attr">
@@ -126,7 +166,7 @@
       </div>
 
       <div class="testimonial fade-up d3">
-        <div class="t-photo" aria-hidden="true"><img src="/images/testimonials/castro.jpg" alt="" width="480" height="480" loading="lazy" decoding="async"></div>
+        <div class="t-photo"><img src="/images/testimonials/castro.jpg" alt="Hugo Castro, Head Coach &amp; Owner, Constrictor Peru · Lima, Peru" width="480" height="480" loading="lazy" decoding="async"></div>
         <div class="t-body">
           <blockquote>&ldquo;What I value most about Prime is trust. They understand that every academy has its own challenges, and they've always treated me with honesty, respect, and flexibility. They delivered outstanding rashguards for my students, but more importantly, they've become a partner I know I can rely on.&rdquo;</blockquote>
           <div class="t-attr">
@@ -165,6 +205,10 @@
     <a href="mailto:info@primedeals.global">Email</a>
     <span class="sep">·</span>
     <a href="https://www.instagram.com/primedealsglobal/" target="_blank" rel="noopener">Instagram</a>
+    <span class="sep">·</span>
+    <a href="/en/faq">FAQ</a>
+    <span class="sep">·</span>
+    <a href="/en/quote">Quote</a>
     <span class="spacer"></span>
     <span>© 2026 Prime Deals</span>
   </footer>
