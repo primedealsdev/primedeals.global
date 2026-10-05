@@ -84,3 +84,7 @@ Choices made while building the growth and technical-SEO round (branch
     Gallery page (`/galeria`, `/en/gallery`), grouped by Rashguards and Shorts. Product pages
     link to it ("Ver ejemplos" / "See examples"). The gallery is published (indexable, in the
     nav and sitemap); the placeholder photos and `publish-gallery.mjs` were removed.
+26. **Client images are in (2026-10-04).** The owner confirmed that Favoreto, Almeida,
+    Constrictor, Sniper and Sacred Valley agreed to appear, so each has a named section at the
+    top of the Gallery. BÔA was not confirmed and stays out. The Way-branded work remains allowed
+    as a capability example, without naming that brand in text.

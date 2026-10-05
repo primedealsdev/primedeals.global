@@ -66,8 +66,8 @@ The gallery is live with the supplied images (a mix of real photos and design vi
 disclosed on the page). To improve it, see `docs/PHOTOS.md`:
 
 - [ ] Tell us which images are real photos (then each gets its own label).
-- [ ] Say which clients agree to appear (Favoreto, Almeida, Constrictor, others) so their
-      garments can be added, including long sleeve and women's cuts.
+- Clients in the gallery: Favoreto, Almeida, Constrictor, Sniper, Sacred Valley (all agreed).
+  Tell us before adding any other client.
 - [ ] A real, unbranded fight-shorts photo, and a photo of a team wearing an order (get the
       coach's OK).
 

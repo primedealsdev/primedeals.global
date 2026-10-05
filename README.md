@@ -36,7 +36,7 @@ the extensionless form.
 - `og.png`: link preview image (1200×630) used by every page
 - `og-image.jpg`: older preview image, kept so links shared before 2026-09 still get one
 - `images/testimonials/`: testimonial photos (480×480)
-- `images/products/`: product images (WebP, 480 and 800 px, 4:5). See `docs/PHOTOS.md`
+- `images/clients/`, `images/products/`: gallery images (WebP, 480 and 800 px, 4:5). See `docs/PHOTOS.md`
 - `robots.txt`, `sitemap.xml`
 
 ## Adding or changing a page

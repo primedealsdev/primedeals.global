@@ -6,7 +6,7 @@ In priority order, as of 2026-10-04. Detailed steps are in `docs/OWNER-TODO.md`.
 2. Search Console: verify the domain, submit `sitemap.xml`, request indexing of the new URLs.
 3. GA4: mark key events, register custom dimensions, link Search Console, create the audience.
 4. Instagram bio: switch to the UTM link (`docs/ANALYTICS.md`).
-4b. Tell us which product images are real photos and which clients may appear (`docs/PHOTOS.md`).
+4b. Tell us which gallery images are real photos (`docs/PHOTOS.md`).
 5. Real answers: the six open FAQ questions and the rashguard and shorts/leggings facts.
 6. Real photos to replace or extend the gallery (`docs/PHOTOS.md`).
 7. Bing Webmaster Tools (import from Search Console).
