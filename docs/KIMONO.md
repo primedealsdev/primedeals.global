@@ -7,7 +7,7 @@ The pages are built and kept. They are hidden, not deleted. Do not delete them.
 |---|---|
 | Spanish page | `kimonos.html` → `/kimonos` |
 | English page | `en/gis.html` → `/en/gis` |
-| State | `noindex`, not in the nav, sitemap, home, FAQ, quote form or gallery, and nothing links to them |
+| State | `noindex`, not in the nav, sitemap, home, FAQ, quote form or gallery (no gi images exist yet), and nothing links to them |
 | Why it is safe | `scripts/check-site.mjs` fails if any page links to a hidden page or lists it in the sitemap |
 | Parked on | 2026-10-04, commit "park kimonos" (`57739eb`, PR #5) |
 
@@ -29,7 +29,7 @@ Nothing here can be invented; each is a `TODO(owner)` in the page source.
 - [ ] Customization: patches, embroidery, printed details, labels, what is and is not possible
 - [ ] Size range, and whether kids' gis are included
 - [ ] Minimum order for gis, typical lead time, sample policy, price guidance (if public)
-- [ ] 1 to 3 real photos of a finished gi (replace the gallery slot, see below)
+- [ ] 1 to 3 real photos of a finished gi (add them to the gallery, see `docs/PHOTOS.md`)
 - [ ] A proof point: a client or coach willing to be quoted about a gi (the current
       testimonials are about rashguards)
 - [ ] If kimonos change the shipping, payment or lead-time answers, update the FAQ
@@ -50,7 +50,7 @@ Do these in one PR, in this order:
    - FAQ answer "¿Qué productos hacen?" / "What do you make?", visible text, links and `FAQPage` JSON-LD
    - quote form product option (`cotizar.html`, `en/quote.html`)
    - `sitemap.xml`: both URLs with the hreflang pair and today's `lastmod`
-   - gallery: add a gi slot back (or use the existing `slot-03-kids-rashguard` for kids)
+   - gallery: add a Kimonos group with the real gi photos
    - `docs/OWNER-TODO.md` (Search Console URLs, Facebook "Scrape Again" list, GBP description)
 4. `node scripts/check-site.mjs` must pass.
 5. After merge: request indexing for `/kimonos` and `/en/gis`, "Scrape Again" in the Facebook
@@ -58,6 +58,6 @@ Do these in one PR, in this order:
 
 ## Why this is not a quick toggle
 
-Unlike the gallery (`node scripts/publish-gallery.mjs`), the kimono pages touch ten places and
+The kimono pages touch ten places and
 depend on facts that do not exist yet. If the relaunch becomes likely, ask for a
-`scripts/publish-kimono.mjs` modelled on the gallery script.
+`scripts/publish-kimono.mjs` that does the restore in one command.

@@ -8,7 +8,7 @@ In priority order, as of 2026-10-04. Detailed steps are in `docs/OWNER-TODO.md`.
 4. Instagram bio: switch to the UTM link (`docs/ANALYTICS.md`).
 4b. Tell us which product images are real photos and which clients may appear (`docs/PHOTOS.md`).
 5. Real answers: the six open FAQ questions and the rashguard and shorts/leggings facts.
-6. Six gallery photos, then `node scripts/publish-gallery.mjs`.
+6. Real photos to replace or extend the gallery (`docs/PHOTOS.md`).
 7. Bing Webmaster Tools (import from Search Console).
 8. Google Business Profile (service-area business if there are no public premises).
 9. Google reviews from the published coaches, once the profile is verified.
@@ -20,4 +20,4 @@ In priority order, as of 2026-10-04. Detailed steps are in `docs/OWNER-TODO.md`.
 - **Kimonos / gis: possible product next year.** See `docs/KIMONO.md`. Pages are built and
   hidden; the facts and photos are missing.
 - Review / rating markup: wait until Google reviews exist (`docs/DECISIONS.md`, item 6).
-- Product photos on product pages: needs real photography; the gallery covers it for now.
+- Product photos inside the product pages: images live in the gallery to keep those pages text-first.

@@ -9,9 +9,9 @@ visualizations**. We do not know per image which is which, so the pages say so o
 
 | Page | Images (front + back) | Folder |
 |---|---|---|
-| `/rashguards`, `/en/rashguards` | full-design sublimation, kids, colored raglan sleeves, black | `images/products/rashguards/` |
-| `/shorts`, `/en/shorts` | fight shorts, compression shorts, spats (leggings) | `images/products/shorts/` |
-| Home (`/`, `/en/`) | 3-image strip linking to the product pages | reuses the above |
+| `/galeria`, `/en/gallery` (own section, in the nav) | **Rashguards:** full-design sublimation, kids, colored raglan sleeves, black. **Shorts:** fight shorts, compression shorts, spats (leggings) | `images/products/rashguards/`, `images/products/shorts/` |
+
+Product pages and the home page carry no images; the product pages link to the gallery.
 
 Each image exists at 480 and 800 px wide (WebP, 4:5, flattened on a light neutral). The
 checker fails if any image under `images/` (except testimonial photos) exceeds 150 KB or a
@@ -34,5 +34,5 @@ checker fails if any image under `images/` (except testimonial photos) exceeds 1
 - [ ] A real fight-shorts photo that is not branded would be better than the one used.
 - [ ] Add the product images to the `Service` JSON-LD and use one as the page's link preview
       once real/representative status is settled.
-- [ ] If you want the gallery published with these: `docs/OWNER-TODO.md` section 6, then
-      `node scripts/publish-gallery.mjs`.
+- [ ] To add an image: put 480 and 800 px WebP files (4:5, under 150 KB) in `images/products/<group>/`
+      and add a `<li><figure>` to both gallery pages; `node scripts/check-site.mjs` validates it.

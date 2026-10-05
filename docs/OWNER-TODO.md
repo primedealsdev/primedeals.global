@@ -60,20 +60,16 @@ Product pages (both languages), "Tela y confección" / "Cloth and construction":
   missing and how to restore is in `docs/KIMONO.md`.
 - [ ] Shorts (shorts, shorts de compresión, leggings): fabric and construction per garment, print method, sizes, kids?
 
-## 6. Gallery photos (the gallery stays hidden until you supply these)
+## 6. Gallery: real photos and permissions
 
-Replace each file in `images/gallery/` with a real photo **of the same name**, JPEG,
-1200 x 1500 px (4:5 portrait), under about 300 KB:
+The gallery is live with the supplied images (a mix of real photos and design visualizations,
+disclosed on the page). To improve it, see `docs/PHOTOS.md`:
 
-- [ ] `slot-01-rashguard-front.jpg`: a finished custom rashguard, front, clean background
-- [ ] `slot-02-rashguard-mesh-panel-detail.jpg`: close-up of the side mesh panel
-- [ ] `slot-03-kids-rashguard.jpg`: a finished custom kids' rashguard
-- [ ] `slot-04-fight-shorts.jpg`: finished custom shorts, compression shorts or leggings
-- [ ] `slot-05-team-wearing-order.jpg`: an academy team wearing their order (get the coach's OK)
-- [ ] `slot-06-finish-detail.jpg`: stitching, label or finish detail
-
-Then run `node scripts/publish-gallery.mjs` and `node scripts/check-site.mjs`, and commit.
-That removes `noindex`, adds the nav link and adds both pages to the sitemap.
+- [ ] Tell us which images are real photos (then each gets its own label).
+- [ ] Say which clients agree to appear (Favoreto, Almeida, Constrictor, others) so their
+      garments can be added, including long sleeve and women's cuts.
+- [ ] A real, unbranded fight-shorts photo, and a photo of a team wearing an order (get the
+      coach's OK).
 
 ## 7. Google Business Profile
 

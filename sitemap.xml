@@ -99,4 +99,18 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/quote"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/cotizar"/>
   </url>
+  <url>
+    <loc>https://primedeals.global/galeria</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/galeria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/galeria"/>
+  </url>
+  <url>
+    <loc>https://primedeals.global/en/gallery</loc>
+    <lastmod>2026-10-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/galeria"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/gallery"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/galeria"/>
+  </url>
 </urlset>

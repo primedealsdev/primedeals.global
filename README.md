@@ -16,7 +16,7 @@ build step.
 | `/testimonios` | `testimonios.html` | `en/testimonials.html` (`/en/testimonials`) |
 | `/preguntas-frecuentes` | `preguntas-frecuentes.html` | `en/faq.html` (`/en/faq`) |
 | `/cotizar` | `cotizar.html` | `en/quote.html` (`/en/quote`) |
-| `/galeria` (hidden: `noindex`, no nav, not in sitemap) | `galeria.html` | `en/gallery.html` (`/en/gallery`) |
+| `/galeria` | `galeria.html` | `en/gallery.html` (`/en/gallery`) |
 | any missing URL | `404.html` (bilingual, `noindex`) | |
 
 Spanish URLs are in Spanish, English URLs in English. `the-process.html` and
@@ -36,7 +36,6 @@ the extensionless form.
 - `og.png`: link preview image (1200×630) used by every page
 - `og-image.jpg`: older preview image, kept so links shared before 2026-09 still get one
 - `images/testimonials/`: testimonial photos (480×480)
-- `images/gallery/`: gallery photos (1200×1500). Currently labelled placeholders
 - `images/products/`: product images (WebP, 480 and 800 px, 4:5). See `docs/PHOTOS.md`
 - `robots.txt`, `sitemap.xml`
 
@@ -53,14 +52,11 @@ the extensionless form.
 5. After a copy change, refresh the WhatsApp/Facebook preview cache at
    <https://developers.facebook.com/tools/debug/> ("Scrape Again").
 
-## Publishing the gallery
+## Gallery
 
-`/galeria` and `/en/gallery` stay hidden until `images/gallery/` holds real photos (the
-required files are listed in `docs/OWNER-TODO.md`). Then:
-
-```
-node scripts/publish-gallery.mjs && node scripts/check-site.mjs
-```
+`/galeria` and `/en/gallery` hold all product images (they are not on the product pages, which
+stay text-first and link to the gallery). Images live in `images/products/` at 480 and 800 px
+(WebP, 4:5). To add or replace one, see `docs/PHOTOS.md`.
 
 ## Docs
 

@@ -34,9 +34,7 @@ Choices made while building the growth and technical-SEO round (branch
 
 ## Pages
 
-9. **Gallery is `noindex`, outside the nav and the sitemap,** with 6 clearly labelled
-   placeholder JPEGs (`images/gallery/slot-*.jpg`, 1200x1500). Publish with one command:
-   `node scripts/publish-gallery.mjs` (it refuses while any placeholder is still in place).
+9. **Gallery** (superseded by 25): was built hidden with placeholders and a publish script.
 10. **Nav grew to 7 items.** Items wrap on phones, and the nav stays on its own row until
     1320px (it used to sit inline from 1024px, which no longer fits).
 11. **Quote form:** works without a backend. On submit it validates, fires `quote_submit`,
@@ -62,7 +60,7 @@ Choices made while building the growth and technical-SEO round (branch
     repo has no build step and the HTML files are the source of truth.
 21. **Review follow-ups:** scroll depth waits for a real scroll; the quote form rejects past
     deadlines, quantities over 999999 and malformed phone numbers; FAQPage answers have no
-    dangling link text; `publish-gallery.mjs` only bumps `lastmod` on pages it changed.
+    dangling link text; the publish script (since removed) only bumped `lastmod` on pages it changed.
     Left as is on purpose: `areaServed` includes the US (a Miami academy is a published
     client), and consent stays `granted` by default as the brief asks.
 22. **Kimonos/gis parked (not offered for now).** The pages stay in the repo as `noindex`, out of
@@ -81,3 +79,8 @@ Choices made while building the growth and technical-SEO round (branch
     unbranded garments are used as capability examples (owner's call); no page text or alt
     text names that brand. Client-branded images stay out of the public repo until each client
     agrees. Details and status: `docs/PHOTOS.md`.
+25. **Images live in their own section (2026-10-04).** Product images above the text felt
+    disruptive, so product pages and the home page are text-first and the images moved to the
+    Gallery page (`/galeria`, `/en/gallery`), grouped by Rashguards and Shorts. Product pages
+    link to it ("Ver ejemplos" / "See examples"). The gallery is published (indexable, in the
+    nav and sitemap); the placeholder photos and `publish-gallery.mjs` were removed.
