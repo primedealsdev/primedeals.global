@@ -37,6 +37,7 @@ the extensionless form.
 - `og-image.jpg`: older preview image, kept so links shared before 2026-09 still get one
 - `images/testimonials/`: testimonial photos (480×480)
 - `images/gallery/`: gallery photos (1200×1500). Currently labelled placeholders
+- `images/products/`: product images (WebP, 480 and 800 px, 4:5). See `docs/PHOTOS.md`
 - `robots.txt`, `sitemap.xml`
 
 ## Adding or changing a page
@@ -64,6 +65,7 @@ node scripts/publish-gallery.mjs && node scripts/check-site.mjs
 ## Docs
 
 - `docs/ROADMAP.md`: what is next, in priority order
+- `docs/PHOTOS.md`: product images, what is used, what is pending
 - `docs/KIMONO.md`: **kimonos/gis are parked (possible product next year)**: state, what is missing, how to restore
 - `docs/TERMINOLOGY.md`: product names (tops/bottoms) and the words to use, in Spanish and English
 - `docs/OWNER-TODO.md`: things only the owner can do

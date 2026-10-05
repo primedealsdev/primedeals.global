@@ -76,3 +76,8 @@ Choices made while building the growth and technical-SEO round (branch
     card, eyebrow, H1), with the three garments in the subtitle. The old "Pantalonetas" / "Fight shorts" pages were renamed before
     going live, so there is no redirect to keep. The garment taxonomy comes from the owner;
     the words come from the research in `docs/TERMINOLOGY.md`.
+24. **Product images (2026-10-04).** The supplied set is a mix of real photos and AI
+    visualizations, so each page carries one honest line saying so. The Way-branded and
+    unbranded garments are used as capability examples (owner's call); no page text or alt
+    text names that brand. Client-branded images stay out of the public repo until each client
+    agrees. Details and status: `docs/PHOTOS.md`.

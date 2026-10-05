@@ -256,6 +256,9 @@ for (const pg of Object.values(pages)) {
   // images: dimensions and alt
   for (const m of h.matchAll(/<img\b[^>]*>/gi)) {
     const tag = m[0];
+    for (const part of (attrOf(tag, 'srcset') || '').split(',').map((x) => x.trim().split(/\s+/)[0]).filter(Boolean)) {
+      if (!resolvePath(part.split('?')[0])) err(f, `<img srcset> target does not exist: ${part}`);
+    }
     if (attrOf(tag, 'alt') === null) err(f, `<img> without alt: ${attrOf(tag, 'src')}`);
     if (!attrOf(tag, 'width') || !attrOf(tag, 'height')) err(f, `<img> without width/height: ${attrOf(tag, 'src')}`);
   }
@@ -281,6 +284,18 @@ for (const pg of Object.values(pages)) {
     if (t && pages[t] && pages[t].noindex) err(f, `nav links to hidden page ${m[1]}`);
   }
 }
+
+// image weight budget: product photos must stay light
+const MAX_KB = 150;
+(function budget(dir) {
+  for (const name of readdirSync(dir)) {
+    const p = join(dir, name);
+    if (statSync(p).isDirectory()) budget(p);
+    else if (/\.(webp|jpe?g|png)$/i.test(name) && statSync(p).size > MAX_KB * 1024 && !p.includes(`${sep}testimonials${sep}`)) {
+      err(relative(ROOT, p).split(sep).join('/'), `image is ${Math.round(statSync(p).size / 1024)} KB (budget ${MAX_KB} KB)`);
+    }
+  }
+})(join(ROOT, 'images'));
 
 // robots.txt
 const robots = existsSync(join(ROOT, 'robots.txt')) ? readFileSync(join(ROOT, 'robots.txt'), 'utf8') : '';
