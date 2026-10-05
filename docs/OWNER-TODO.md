@@ -53,6 +53,8 @@ two disagree):
 - [ ] Payment: deposit, balance, accepted methods, currencies
 - [ ] Which design file formats you accept (add to the "own design" answer)
 
+- [ ] Quality step (`/el-proceso`, step 04): confirm it matches what really happens, or tell us what to change
+
 Product pages (both languages), "Tela y confección" / "Cloth and construction":
 
 - [ ] Rashguards (manga corta y larga): fabric composition, print method, size range, collar/patch options

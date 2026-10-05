@@ -92,3 +92,9 @@ Choices made while building the growth and technical-SEO round (branch
     Constrictor, Sniper and Sacred Valley agreed to appear, so each has a named section at the
     top of the Gallery. BÔA was not confirmed and stays out. The Way-branded work remains allowed
     as a capability example, without naming that brand in text.
+27. **Process is five steps (2026-10-04):** Definición, Diseño, Confección, **Calidad**,
+    Entrega (EN: Scope, Design, Production, **Quality**, Delivery). The quality step is wording the
+    owner shaped: "Verificamos que cada pieza sea fiel a lo que aprobaste. Si algo no está bien,
+    se corrige antes de salir." Every "cuatro pasos" (FAQ, product pages, page title and
+    description) became "cinco pasos". The claim must stay true in practice: if the real quality
+    check differs, change the copy.

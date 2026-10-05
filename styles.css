@@ -588,9 +588,9 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   .hero-compact .subtitulo { max-width: none; }
   .hero.hero-home .titular { font-size: clamp(42px, 3.7vw, 50px); }
 
-  /* Steps: 01 → 04 in one row */
-  .steps { display: grid; grid-template-columns: repeat(4, 1fr); }
-  .step { padding: 36px clamp(22px, 2.2vw, 36px) 40px; border-bottom: 0; border-left: 1px solid var(--line-soft); }
+  /* Steps: 01 → 05 in one row */
+  .steps { display: grid; grid-template-columns: repeat(5, 1fr); }
+  .step { padding: 36px clamp(16px, 1.7vw, 28px) 40px; border-bottom: 0; border-left: 1px solid var(--line-soft); }
   .step:first-child { border-left: 0; padding-left: 0; }
   .step:last-child { padding-right: 0; }
   .step h2 { font-size: 26px; }
