@@ -745,6 +745,18 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   .quote-form .btn { width: auto; justify-self: start; min-width: 320px; }
 }
 
+/* Phones: keep the four menu items on one row (they need ~320px at the desktop type size) */
+@media (max-width: 759px) {
+  .site-nav { justify-content: space-between; gap: 8px 12px; }
+  .site-nav > a, .nav-group summary { font-size: 10px; letter-spacing: 0.08em; }
+  .nav-group summary { padding-right: 14px; }
+  .nav-group summary::after { right: 1px; }
+  /* anchor the open menu to the nav's right edge so it can never overflow the screen */
+  .site-nav { position: relative; }
+  .nav-group { position: static; }
+  .nav-group ul { left: auto; right: 0; top: calc(100% + 8px); }
+}
+
 /* Product images (gallery page) */
 .shots h2 { font-family: var(--font-display); font-weight: 500; font-size: 25px; color: var(--fg); margin: 0 0 18px; }
 .shots { padding: 30px 0 34px; border-bottom: 1px solid var(--line-soft); }
