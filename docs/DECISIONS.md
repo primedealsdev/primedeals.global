@@ -35,8 +35,9 @@ Choices made while building the growth and technical-SEO round (branch
 ## Pages
 
 9. **Gallery** (superseded by 25): was built hidden with placeholders and a publish script.
-10. **Nav is four items** (superseded the 7-item version): Inicio, El Proceso, **Las prendas**
-    (Rashguards, Shorts, Galería) and Testimonios. The group is a native `<details>` dropdown
+10. **Nav is four items** (superseded the 7-item version): Inicio, Proceso, **Prendas**
+    (Rashguards, Shorts, Galería) and Testimonios (English: Home, Process, Garments, Testimonials).
+    One word per item, in both languages. The group is a native `<details>` dropdown
     (works without JS, keyboard friendly; `nav.js` only closes it on outside click or Esc).
     Cotizar and Preguntas frecuentes left the nav on purpose; they stay in the footer and in
     the page CTAs.

@@ -1,4 +1,4 @@
-/* Prime Deals — closes the "Las prendas / Garments" menu on outside click or Escape.
+/* Prime Deals — closes the Prendas / Garments menu on outside click or Escape.
    The menu is a native <details>, so it works without this script. */
 (function () {
   'use strict';

@@ -45,7 +45,7 @@ Do these in one PR, in this order:
    steps below by hand.
 3. By hand, the places to restore:
    - `<meta name="robots">` on both pages: `max-image-preview:large` instead of `noindex`
-   - nav: add `Kimonos` (es) / `Gis` (en) to the "Las prendas" / "Garments" menu, between Rashguards and Shorts
+   - nav: add `Kimonos` (es) / `Gis` (en) to the Prendas / Garments menu, between Rashguards and Shorts
    - home "What we make" card (`index.html`, `en/index.html`)
    - FAQ answer "¿Qué productos hacen?" / "What do you make?", visible text, links and `FAQPage` JSON-LD
    - quote form product option (`cotizar.html`, `en/quote.html`)
