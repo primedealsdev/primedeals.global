@@ -19,7 +19,9 @@
   });
   groups.forEach(function (g) {
     g.addEventListener('focusout', function (e) {
-      if (!g.contains(e.relatedTarget)) g.removeAttribute('open');
+      // iOS (Safari and Chrome) doesn't focus links on tap, so relatedTarget is null
+      // mid-tap; closing then hides the links before the click lands.
+      if (e.relatedTarget && !g.contains(e.relatedTarget)) g.removeAttribute('open');
     });
   });
 })();
