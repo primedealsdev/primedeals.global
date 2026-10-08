@@ -8,9 +8,12 @@
   function closeAll(except) {
     groups.forEach(function (g) { if (g !== except) g.removeAttribute('open'); });
   }
-  document.addEventListener('click', function (e) {
+  function onOutside(e) {
     closeAll(e.target.closest ? e.target.closest('.nav-group') : null);
-  });
+  }
+  // iOS sends no click for taps on non-interactive areas, so listen for pointerdown too.
+  document.addEventListener('pointerdown', onOutside);
+  document.addEventListener('click', onOutside);
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     groups.forEach(function (g) {
