@@ -8,9 +8,12 @@
   function closeAll(except) {
     groups.forEach(function (g) { if (g !== except) g.removeAttribute('open'); });
   }
-  document.addEventListener('click', function (e) {
+  function onOutside(e) {
     closeAll(e.target.closest ? e.target.closest('.nav-group') : null);
-  });
+  }
+  // iOS sends no click for taps on non-interactive areas, so listen for pointerdown too.
+  document.addEventListener('pointerdown', onOutside);
+  document.addEventListener('click', onOutside);
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     groups.forEach(function (g) {
@@ -19,7 +22,9 @@
   });
   groups.forEach(function (g) {
     g.addEventListener('focusout', function (e) {
-      if (!g.contains(e.relatedTarget)) g.removeAttribute('open');
+      // iOS (Safari and Chrome) doesn't focus links on tap, so relatedTarget is null
+      // mid-tap; closing then hides the links before the click lands.
+      if (e.relatedTarget && !g.contains(e.relatedTarget)) g.removeAttribute('open');
     });
   });
 })();
