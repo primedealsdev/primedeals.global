@@ -865,3 +865,6 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 @media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }
 .spec a { color: var(--accent); text-decoration: none; }
 .spec a:hover, .spec a:focus-visible { text-decoration: underline; }
+
+/* Prendas grid uses the same white frame as the home carousel */
+.shots-grid .car-frame img { border: 0; aspect-ratio: auto; background: transparent; }
