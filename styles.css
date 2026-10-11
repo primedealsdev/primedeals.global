@@ -863,3 +863,5 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 .car-btn:hover { border-color: var(--accent); color: var(--accent); }
 @media (min-width: 760px) { .car-slide { flex-basis: calc((100% - 24px) / 3); } }
 @media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }
+.spec a { color: var(--accent); text-decoration: none; }
+.spec a:hover, .spec a:focus-visible { text-decoration: underline; }
