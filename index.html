@@ -102,6 +102,8 @@
 <link rel="stylesheet" href="/styles.css">
 <script src="/analytics.js" defer></script>
 <script src="/nav.js" defer></script>
+<script src="/process.js" defer></script>
+<script src="/carousel.js" defer></script>
 <!-- Old English URL (/?lang=en) lives at /en/ now -->
 <script>
   if (new URLSearchParams(location.search).get('lang') === 'en') location.replace('/en/');
@@ -120,16 +122,9 @@
     </a>
     <nav class="site-nav" aria-label="Sitio">
       <a href="/" class="current" aria-current="page">Inicio</a>
-      <a href="/el-proceso">Proceso</a>
-      <details class="nav-group">
-        <summary>Prendas</summary>
-        <ul>
-          <li><a href="/rashguards">Rashguards</a></li>
-          <li><a href="/shorts">Shorts</a></li>
-          <li><a href="/galeria">Galería</a></li>
-        </ul>
-      </details>
+      <a href="/prendas">Prendas</a>
       <a href="/testimonios">Testimonios</a>
+      <a class="nav-cta" href="/cotizar">Cotizar</a>
     </nav>
     <div class="top-right">
       <div class="top-meta">LIMA · PERÚ</div>
@@ -147,40 +142,37 @@
       <h1 class="titular fade-up d1">
         Indumentaria técnica para deportes de combate.<br><em>Respondemos</em> por ella, de principio a fin.
       </h1>
-      <p class="subtitulo fade-up d2">
-        Tú haces el pedido. Nosotros, todo lo demás.
-      </p>
-    </section>
-
-    <p class="section-label eyebrow fade-up d2">Qué hacemos</p>
-    <nav class="page-links fade-up d2" aria-label="Productos">
-      <a class="page-link" href="/rashguards">
-        <span class="pl-title">Rashguards</span>
-        <span class="pl-sub">Manga corta y larga, con tu diseño →</span>
-      </a>
-      <a class="page-link" href="/shorts">
-        <span class="pl-title">Shorts</span>
-        <span class="pl-sub">Shorts, de compresión y leggings →</span>
-      </a>
-    </nav>
-    <p class="trust-line fade-up d3">Ya trabajamos con academias de jiu jitsu en Lima y Miami. <a href="/testimonios">Léelo en sus palabras →</a></p>
-
-    <p class="section-label eyebrow fade-up d3">Nuestra promesa</p>
-    <section class="pillars" aria-label="Pilares">
-      <div class="pillar fade-up d3">
-        <h2>La tela.</h2>
-        <p>Hecha para el grappling: roce, sudor y años de uso.</p>
-      </div>
-      <div class="pillar fade-up d4">
-        <h2>La confección.</h2>
-        <p>Cada prenda se revisa antes de salir. El segundo pedido sale igual de bien que el primero.</p>
-      </div>
-      <div class="pillar fade-up d5">
-        <h2>El tiempo.</h2>
-        <p>Una fecha dada es una fecha cumplida.</p>
+      <p class="subtitulo fade-up d2">Tú haces el pedido. Nosotros, todo lo demás.</p>
+      <div class="hero-actions fade-up d2">
+        <a class="btn btn-primary" href="https://wa.me/51940934722?text=Hola%2C%20quiero%20hacer%20un%20pedido.%0AMarca%2Facademia%3A%20%0ACantidad%20aproximada%3A%20" target="_blank" rel="noopener"><span class="label-txt">Iniciar un pedido por WhatsApp</span><span class="arrow" aria-hidden="true"></span></a>
       </div>
     </section>
 
+    <section class="works fade-up d3" aria-label="Trabajos">
+      <div class="carousel" role="region" aria-roledescription="carrusel" aria-label="Trabajos recientes">
+        <ul class="car-track"><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/clients/favoreto/adult-front-800.webp" srcset="/images/clients/favoreto/adult-front-480.webp 480w, /images/clients/favoreto/adult-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard negro de manga corta con franjas doradas y el escudo de Favoreto, frente" width="800" height="1000" loading="eager" decoding="async"></span></span><span class="car-cap">Favoreto · Adulto</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img class="bars" src="/images/clients/favoreto/project-front-800.webp" srcset="/images/clients/favoreto/project-front-480.webp 480w, /images/clients/favoreto/project-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Mujer con el rashguard de proyecto personalizado de Favoreto, ilustración en el frente" width="800" height="1000" loading="eager" decoding="async"></span></span><span class="car-cap">Favoreto · Proyecto especial</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img class="bars-sm" src="/images/clients/favoreto/kids-front-800.webp" srcset="/images/clients/favoreto/kids-front-480.webp 480w, /images/clients/favoreto/kids-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard infantil negro con mangas amarillas y escudo de Favoreto, frente" width="800" height="1000" loading="eager" decoding="async"></span></span><span class="car-cap">Favoreto · Infantil</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/clients/almeida/short-women-front-800.webp" srcset="/images/clients/almeida/short-women-front-480.webp 480w, /images/clients/almeida/short-women-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard de manga corta para mujer con paneles laterales rojos y logo de Almeida JJ, frente" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">Almeida · Manga corta</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img class="zoom-c" src="/images/clients/constrictor/front-800.webp" srcset="/images/clients/constrictor/front-480.webp 480w, /images/clients/constrictor/front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard negro de manga corta con diseño tono sobre tono de una serpiente, frente" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">Constrictor</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img class="zoom" src="/images/clients/sniper/octopus-front-800.webp" srcset="/images/clients/sniper/octopus-front-480.webp 480w, /images/clients/sniper/octopus-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard de manga corta con pulpo de Sniper, frente" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">Sniper · Pulpo</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/clients/boa/front-800.webp" srcset="/images/clients/boa/front-480.webp 480w, /images/clients/boa/front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard negro de manga corta con mangas raglán verde, amarillo y rojo y el logo de BÔA Collective, frente" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">BÔA Collective</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/products/rashguards/kids-front-800.webp" srcset="/images/products/rashguards/kids-front-480.webp 480w, /images/products/rashguards/kids-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard infantil blanco con una pequeña corona en el pecho, frente" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">The Way Infantil · frente</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/products/rashguards/kids-back-800.webp" srcset="/images/products/rashguards/kids-back-480.webp 480w, /images/products/rashguards/kids-back-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard infantil blanco, espalda" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">The Way Infantil · espalda</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/products/rashguards/raglan-black-front-800.webp" srcset="/images/products/rashguards/raglan-black-front-480.webp 480w, /images/products/rashguards/raglan-black-front-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard negro de manga corta con diseño discreto, frente" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">The Way Ranked - Black Belt · frente</span></a></li><li class="car-slide"><a href="/prendas"><span class="car-frame"><span class="car-ph"><img src="/images/products/rashguards/raglan-black-back-800.webp" srcset="/images/products/rashguards/raglan-black-back-480.webp 480w, /images/products/rashguards/raglan-black-back-800.webp 800w" sizes="(min-width:760px) 270px,72vw" alt="Rashguard negro de manga corta con diseño de casco samurái en la espalda" width="800" height="1000" loading="lazy" decoding="async"></span></span><span class="car-cap">The Way Ranked - Black Belt · espalda</span></a></li></ul>
+        <div class="car-ui"><div class="car-dots"><button class="car-dot" type="button" aria-label="Foto 1"></button><button class="car-dot" type="button" aria-label="Foto 2"></button><button class="car-dot" type="button" aria-label="Foto 3"></button><button class="car-dot" type="button" aria-label="Foto 4"></button><button class="car-dot" type="button" aria-label="Foto 5"></button><button class="car-dot" type="button" aria-label="Foto 6"></button><button class="car-dot" type="button" aria-label="Foto 7"></button><button class="car-dot" type="button" aria-label="Foto 8"></button><button class="car-dot" type="button" aria-label="Foto 9"></button><button class="car-dot" type="button" aria-label="Foto 10"></button><button class="car-dot" type="button" aria-label="Foto 11"></button></div><div class="car-btns"><button class="car-btn car-prev" type="button" aria-label="Anterior">←</button><button class="car-btn car-next" type="button" aria-label="Siguiente">→</button></div></div>
+      </div>
+      <p class="trust-line">Ya trabajamos con academias de jiu jitsu en Lima y Miami. <a href="/prendas">Ver todas las prendas →</a></p>
+    </section>
+
+    <section class="process fade-up d3" id="proceso" aria-label="Cómo trabajamos">
+      <h2>Cinco pasos. Un interlocutor. Cero sorpresas.</h2>
+      <p class="lead">De la primera conversación a la entrega. Toca un paso.</p>
+      <ol class="timeline" role="tablist" aria-label="Pasos del proceso"><li><button class="tl-node" type="button" role="tab" aria-selected="true" aria-controls="paso-1"><span class="dot-n"><span>01</span></span><span class="t-lab">Definición</span></button></li><li><button class="tl-node" type="button" role="tab" aria-selected="false" aria-controls="paso-2"><span class="dot-n"><span>02</span></span><span class="t-lab">Diseño</span></button></li><li><button class="tl-node" type="button" role="tab" aria-selected="false" aria-controls="paso-3"><span class="dot-n"><span>03</span></span><span class="t-lab">Confección</span></button></li><li><button class="tl-node" type="button" role="tab" aria-selected="false" aria-controls="paso-4"><span class="dot-n"><span>04</span></span><span class="t-lab">Calidad</span></button></li><li><button class="tl-node" type="button" role="tab" aria-selected="false" aria-controls="paso-5"><span class="dot-n"><span>05</span></span><span class="t-lab">Entrega</span></button></li></ol>
+      <div class="tl-panels"><div class="tl-panel" id="paso-1" role="tabpanel"><h3>01 · Definición</h3><p>Cantidades, especificaciones, plazos y presupuesto. Todo por escrito antes de empezar.</p></div><div class="tl-panel" id="paso-2" role="tabpanel"><h3>02 · Diseño</h3><p>Tu diseño o uno nuevo, hecho juntos. Elegimos las mejores opciones dentro de tu presupuesto. Precio acordado antes de producir.</p></div><div class="tl-panel" id="paso-3" role="tabpanel"><h3>03 · Confección</h3><p>Supervisamos la producción en Lima, de principio a fin.</p></div><div class="tl-panel" id="paso-4" role="tabpanel"><h3>04 · Calidad</h3><p>Verificamos que cada pieza sea fiel a lo que aprobaste. Si algo no está bien, se corrige antes de salir.</p></div><div class="tl-panel" id="paso-5" role="tabpanel"><h3>05 · Entrega</h3><p>En la fecha acordada. Sin excusas. En tus manos.</p></div></div>
+      <p class="process-note">Una fecha dada es una fecha cumplida.</p>
+    </section>
+
+    <section class="pulls fade-up d4" aria-label="Testimonios">
+      <h2>En sus palabras.</h2>
+      <div class="pull-grid">
+        <figure class="pull"><img src="/images/testimonials/favoreto.jpg" alt="Desiree Favoreto" width="480" height="480" loading="lazy"><div><blockquote>&ldquo;La calidad, la comunicación y el compromiso durante todo el proceso hicieron que seguir trabajando con Prime fuera una decisión muy fácil.&rdquo;</blockquote><cite>Desiree Favoreto · Favoreto, Miami</cite></div></figure>
+        <figure class="pull"><img src="/images/testimonials/retamozo.jpg" alt="Francisco Retamozo" width="480" height="480" loading="lazy"><div><blockquote>&ldquo;La colección quedó exactamente como la imaginé y ver a mis alumnos usarla con orgullo ha sido muy gratificante.&rdquo;</blockquote><cite>Francisco Retamozo · Coach, Lima</cite></div></figure>
+        <figure class="pull"><img src="/images/testimonials/castro.jpg" alt="Hugo Castro" width="480" height="480" loading="lazy"><div><blockquote>&ldquo;Lo que más valoro de Prime es la confianza.&rdquo;</blockquote><cite>Hugo Castro · Constrictor Peru, Lima</cite></div></figure>
+      </div>
+      <a class="more" href="/testimonios">Leer los cuatro testimonios →</a>
+    </section>
 
     <section class="cta fade-up d6" aria-label="Contacto">
       <div class="cta-text">
@@ -188,17 +180,10 @@
         <p class="sub">Un solo pedido. Ejecución total. Hecho en el Perú.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-primary" href="https://wa.me/51940934722?text=Hola%2C%20quiero%20hacer%20un%20pedido.%0AMarca%2Facademia%3A%20%0ACantidad%20aproximada%3A%20" target="_blank" rel="noopener">
-          <span class="label-txt">Iniciar un pedido por WhatsApp</span>
-          <span class="arrow" aria-hidden="true"></span>
-        </a>
-        <a class="btn btn-dark" href="mailto:info@primedeals.global">
-          <span class="label-txt">Escríbenos por correo</span>
-          <span class="arrow" aria-hidden="true"></span>
-        </a>
+        <a class="btn btn-primary" href="https://wa.me/51940934722?text=Hola%2C%20quiero%20hacer%20un%20pedido.%0AMarca%2Facademia%3A%20%0ACantidad%20aproximada%3A%20" target="_blank" rel="noopener"><span class="label-txt">Iniciar un pedido por WhatsApp</span><span class="arrow" aria-hidden="true"></span></a>
+        <a class="btn btn-dark" href="mailto:info@primedeals.global"><span class="label-txt">Escríbenos por correo</span><span class="arrow" aria-hidden="true"></span></a>
         <nav class="cta-links" aria-label="Explorar">
-          <a href="https://www.instagram.com/primedealsglobal/" target="_blank" rel="noopener">Ver trabajos <span aria-hidden="true">→</span></a>
-          <a href="/el-proceso">Cómo trabajamos <span aria-hidden="true">→</span></a>
+          <a href="/prendas">Prendas <span aria-hidden="true">→</span></a>
           <a href="/testimonios">Testimonios <span aria-hidden="true">→</span></a>
           <a href="/preguntas-frecuentes">Preguntas frecuentes <span aria-hidden="true">→</span></a>
           <a href="/cotizar">Cotizar <span aria-hidden="true">→</span></a>
