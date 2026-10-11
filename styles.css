@@ -790,3 +790,89 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
   .fade-up { animation: none; opacity: 1; transform: none; }
   .eyebrow .pulse { animation: none; }
 }
+
+/* Prendas: fabric spec line under a group heading */
+.spec { margin: -6px 0 18px; color: var(--fg-dim, var(--fg)); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; }
+.spec strong { font-weight: 500; color: var(--fg); }
+
+/* Home: first-screen action + works strip */
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 0; }
+.works { margin: 34px 0 0; }
+.works .shots-strip { margin-bottom: 0; }
+
+/* Home: process timeline (all text stays in the HTML; JS only toggles panels) */
+.process { padding: 40px 0 8px; border-top: 1px solid var(--line-soft); margin-top: 40px; }
+.process h2 { font-family: var(--font-display); font-weight: 500; font-size: 30px; color: var(--fg); margin: 0 0 6px; }
+.process .lead { color: var(--fg-mute); margin: 0 0 26px; font-size: 15px; }
+.timeline { list-style: none; margin: 0 0 22px; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); position: relative; }
+.timeline::before { content: ""; position: absolute; left: 10%; right: 10%; top: 21px; height: 1px; background: var(--line); }
+.timeline li { display: flex; justify-content: center; position: relative; }
+.tl-node { all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 0 4px 4px; text-align: center; }
+.tl-node .dot-n { width: 42px; height: 42px; border: 1px solid var(--line); background: var(--ink, #171010); color: var(--fg-mute); display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; letter-spacing: .08em; transform: rotate(45deg); }
+.tl-node .dot-n span { transform: rotate(-45deg); }
+.tl-node .t-lab { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg-faint); }
+.tl-node[aria-selected="true"] .dot-n { border-color: var(--accent); color: var(--accent); }
+.tl-node[aria-selected="true"] .t-lab { color: var(--fg); }
+.tl-node:focus-visible { outline: 1px solid var(--accent); outline-offset: 4px; }
+.tl-panel { border-left: 1px solid var(--accent); padding: 4px 0 4px 18px; margin: 0 0 14px; max-width: 62ch; }
+.tl-panel h3 { font-family: var(--font-display); font-weight: 500; font-size: 24px; margin: 0 0 6px; color: var(--fg); }
+.tl-panel p { margin: 0; color: var(--fg-mute); font-size: 15.5px; line-height: 1.66; }
+.tl-panel[hidden] { display: none; }
+.timeline:not(.is-ready) + .tl-panels .tl-panel { display: block; }
+.process-note { color: var(--fg); font-family: var(--font-display); font-size: 21px; margin: 22px 0 0; }
+
+/* Home: testimonial pull-quotes */
+.pulls { padding: 40px 0 8px; border-top: 1px solid var(--line-soft); margin-top: 36px; }
+.pulls h2 { font-family: var(--font-display); font-weight: 500; font-size: 30px; color: var(--fg); margin: 0 0 22px; }
+.pull-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
+.pull { margin: 0; display: flex; gap: 16px; align-items: flex-start; }
+.pull img { width: 72px; height: 72px; object-fit: cover; border: 1px solid var(--line-soft); flex: 0 0 auto; }
+.pull blockquote { margin: 0 0 8px; color: var(--fg); font-size: 15.5px; line-height: 1.55; }
+.pull cite { font-style: normal; color: var(--fg-faint); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.pulls .more { display: inline-block; margin-top: 22px; color: var(--accent); text-decoration: none; font-size: 14.5px; }
+@media (min-width: 900px) { .pull-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; } .pull { flex-direction: column; } .pull img { width: 96px; height: 96px; } }
+
+/* Nav: always-visible quote button */
+.site-nav .nav-cta { border: 1px solid var(--accent); color: var(--accent); padding: 5px 12px; text-decoration: none; }
+.site-nav .nav-cta:hover, .site-nav .nav-cta:focus-visible { background: var(--accent); color: var(--ink); }
+.shots-strip a, .shots-strip a:visited { color: inherit; text-decoration: none; }
+
+/* Home: works carousel (scroll-snap; arrows/dots/autoplay added by carousel.js) */
+.carousel { position: relative; }
+.car-track { list-style: none; margin: 0; padding: 0; display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.car-track::-webkit-scrollbar { display: none; }
+.car-slide { flex: 0 0 72%; scroll-snap-align: start; margin: 0; }
+.car-slide a, .car-slide a:visited { display: block; color: inherit; text-decoration: none; }
+.car-frame { display: block; aspect-ratio: 4 / 5; padding: 6%; overflow: hidden; background: #fff; border: 1px solid var(--line-soft); box-sizing: border-box; }
+.car-ph { display: block; width: 100%; height: 100%; overflow: hidden; }
+.car-frame img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; }
+/* Favoreto project photo has grey bars baked into the file; scale them out of the frame, not the source */
+.car-frame img.bars { transform: scale(1.34); }
+.car-frame img.zoom-c { transform: scale(1.18); transform-origin: center 40%; }
+.car-frame img.zoom { transform: scale(1.22); }
+.car-frame img.bars-sm { transform: scale(1.18); }
+.car-slide .car-cap { display: block; margin-top: 8px; color: var(--fg-faint); font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.car-ui { display: none; align-items: center; justify-content: space-between; margin-top: 14px; }
+.carousel.is-ready .car-ui { display: flex; }
+.car-dots { display: flex; flex-wrap: wrap; gap: 6px; max-width: calc(100% - 96px); }
+.car-dot { all: unset; cursor: pointer; width: 16px; height: 3px; background: var(--line); }
+.car-dot[aria-current="true"] { background: var(--accent); }
+.car-dot:focus-visible, .car-btn:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+.car-btns { display: flex; gap: 8px; }
+.car-btn { all: unset; cursor: pointer; width: 38px; height: 38px; border: 1px solid var(--line); display: grid; place-items: center; color: var(--fg); font-size: 16px; }
+.car-btn:hover { border-color: var(--accent); color: var(--accent); }
+@media (min-width: 760px) { .car-slide { flex-basis: calc((100% - 24px) / 3); } }
+@media (prefers-reduced-motion: reduce) { .car-track { scroll-behavior: auto; } }
+.spec a { color: var(--accent); text-decoration: none; }
+.spec a:hover, .spec a:focus-visible { text-decoration: underline; }
+
+/* Prendas grid uses the same white frame as the home carousel */
+.shots-grid .car-frame img { border: 0; aspect-ratio: auto; background: transparent; }
+
+.car-frame img.zoom-a { transform: scale(1.3); transform-origin: center 45%; }
+
+/* Prendas: sub-groups inside Rashguards (academias / proyectos especiales / The Way) */
+.subgroup { margin: 30px 0 14px; padding-top: 18px; border-top: 1px solid var(--line-soft); font-family: var(--font-mono); font-weight: 400; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-mute); }
+.spec + .subgroup, .shots-sub + .subgroup { margin-top: 22px; border-top: 0; padding-top: 0; }
+
+.subgroup + .spec { margin-top: -4px; }

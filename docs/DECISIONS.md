@@ -98,3 +98,11 @@ Choices made while building the growth and technical-SEO round (branch
     se corrige antes de salir." Every "cuatro pasos" (FAQ, product pages, page title and
     description) became "cinco pasos". The claim must stay true in practice: if the real quality
     check differs, change the copy.
+28. **Site restructure (2026-10-10).** Navigation is Inicio · Prendas · Testimonios plus a Cotizar
+    button. `/prendas` (EN `/en/garments`) replaces the Gallery: one page, grouped by garment, with
+    the fabric line written once per group (rashguards, compression shorts and leggings 85/15
+    poliéster/elastano; shorts 95/5). The process is no longer a page: it is a five-step
+    timeline on the home page (`#proceso`, EN `#process`) with every step's text in the HTML;
+    `/el-proceso`, `/galeria` and their EN twins are noindex redirect stubs. `/rashguards` and
+    `/shorts` stay as detail pages, linked from Prendas, out of the main nav. The home hero is a
+    carousel of every rashguard. Public copy never says "Nova" or "antifluido".

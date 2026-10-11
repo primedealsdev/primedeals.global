@@ -27,8 +27,15 @@ sources are padded rather than cropped). The checker fails if any image under `i
 ## Permission
 
 Favoreto, Almeida, Constrictor, Sniper and Sacred Valley agreed to appear (owner, 2026-10-04).
-BÔA has not been confirmed and is **not** included. Do not add it, or any new client, until the
+BÔA was added on 2026-10-10 by the owner's instruction ("puedes incluir BOA también"), as one
+rashguard in the home carousel and on the Prendas page. The image is a catalog render
+(`primeos/pricing/catalogo/b2b/special_projects/rashguard_boa_front.png`), not a photo. Before it
+ships, the owner should confirm BÔA agreed to appear. Do not add any other new client until the
 owner says so.
+
+The Way is a brand like the others and may be named in captions ("The Way - Queen of the Mat",
+"The Way - Ranked: Black Belt"). The "Defeat your demons" render (bushido) was removed on request
+and is to be replaced by a better photo.
 
 ## Rules applied
 

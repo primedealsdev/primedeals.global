@@ -3,14 +3,14 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://primedeals.global/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/"/>
   </url>
   <url>
     <loc>https://primedeals.global/en/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/"/>
@@ -42,20 +42,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/shorts"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/shorts"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/shorts"/>
-  </url>
-  <url>
-    <loc>https://primedeals.global/el-proceso</loc>
-    <lastmod>2026-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/el-proceso"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/the-process"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/el-proceso"/>
-  </url>
-  <url>
-    <loc>https://primedeals.global/en/the-process</loc>
-    <lastmod>2026-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/el-proceso"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/the-process"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/el-proceso"/>
   </url>
   <url>
     <loc>https://primedeals.global/testimonios</loc>
@@ -100,17 +86,17 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/cotizar"/>
   </url>
   <url>
-    <loc>https://primedeals.global/galeria</loc>
-    <lastmod>2026-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/galeria"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/gallery"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/galeria"/>
+    <loc>https://primedeals.global/prendas</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/prendas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/garments"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/prendas"/>
   </url>
   <url>
-    <loc>https://primedeals.global/en/gallery</loc>
-    <lastmod>2026-10-04</lastmod>
-    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/galeria"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/gallery"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/galeria"/>
+    <loc>https://primedeals.global/en/garments</loc>
+    <lastmod>2026-10-10</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://primedeals.global/prendas"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://primedeals.global/en/garments"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://primedeals.global/prendas"/>
   </url>
 </urlset>
