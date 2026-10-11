@@ -34,7 +34,7 @@ ships, the owner should confirm BÔA agreed to appear. Do not add any other new 
 owner says so.
 
 The Way is a brand like the others and may be named in captions ("The Way Infantil",
-"The Way Ranked - Black Belt"). The "Defeat your demons" render (bushido) was removed on request
+"The Way - Ranked: Black Belt"). The "Defeat your demons" render (bushido) was removed on request
 and is to be replaced by a better photo.
 
 ## Rules applied
