@@ -874,3 +874,5 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 /* Prendas: sub-groups inside Rashguards (academias / proyectos especiales / The Way) */
 .subgroup { margin: 30px 0 14px; padding-top: 18px; border-top: 1px solid var(--line-soft); font-family: var(--font-mono); font-weight: 400; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg-mute); }
 .spec + .subgroup, .shots-sub + .subgroup { margin-top: 22px; border-top: 0; padding-top: 0; }
+
+.subgroup + .spec { margin-top: -4px; }
