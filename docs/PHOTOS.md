@@ -15,7 +15,7 @@ opens with one section per client, then generic examples.
 | Favoreto Escola de Jiu Jitsu (Miami) | adult, kids, special project, black and white tees | `images/clients/favoreto/` |
 | Almeida Jiu Jitsu Perú (Lima) | long sleeve, women's long and short sleeve | `images/clients/almeida/` |
 | Constrictor Peru (Lima) | rashguard | `images/clients/constrictor/` |
-| Sniper | octopus rashguard | `images/clients/sniper/` |
+| Nova Uniao Peru (formerly Sniper) | octopus rashguard | `images/clients/sniper/` |
 | Sacred Valley Grappling | tee | `images/clients/sacred-valley/` |
 | More examples: Rashguards, Shorts | design and garment examples, shorts, compression shorts, spats | `images/products/` |
 
@@ -26,7 +26,7 @@ sources are padded rather than cropped). The checker fails if any image under `i
 
 ## Permission
 
-Favoreto, Almeida, Constrictor, Sniper and Sacred Valley agreed to appear (owner, 2026-10-04).
+Favoreto, Almeida, Constrictor, Nova Uniao Peru (formerly Sniper) and Sacred Valley agreed to appear (owner, 2026-10-04).
 BÔA was added on 2026-10-10 by the owner's instruction ("puedes incluir BOA también"), as one
 rashguard in the home carousel and on the Prendas page. The image is a catalog render
 (`primeos/pricing/catalogo/b2b/special_projects/rashguard_boa_front.png`), not a photo. Before it
@@ -40,7 +40,7 @@ and is to be replaced by a better photo.
 ## Rules applied
 
 - Client sections are named after the client (they agreed); the generic examples never name a
-  brand in alt text or captions. Sniper has no location line.
+  brand in alt text or captions. Nova Uniao Peru has no location line.
 - Hoodies, crewnecks and the plain black long-sleeve top were left out (AI-generated).
 - Hat left out (not a product line).
 - The source files for the adult Favoreto pair were labeled front/back the wrong way round;
