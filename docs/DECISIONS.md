@@ -11,11 +11,12 @@ Choices made while building the growth and technical-SEO round (branch
    we start"). The gap is marked `TODO(owner)` in an HTML comment (never in visible text, never
    in JSON-LD) and listed in `docs/OWNER-TODO.md`. `scripts/check-site.mjs` fails if
    `TODO(owner)` ever shows up in visible text or structured data.
-2. **FAQ: 12 questions, 6 confirmed.** Only the six answers backed by existing site content
-   are in the `FAQPage` JSON-LD. The other six carry `data-todo="owner"` and stay out until
-   confirmed; the checker enforces that the JSON-LD matches the confirmed set exactly.
+2. **FAQ: 12 questions, all 12 confirmed (updated 2026-11-08).** Only confirmed answers are in the
+   `FAQPage` JSON-LD. Minimum order, lead time, samples, payment, the US carrier (DHL) and sizing were confirmed by the owner
+   on 2026-11-08. The checker enforces that the JSON-LD matches the confirmed set exactly.
 3. **Facts taken from the testimonials page:** kids' rashguards exist, mesh side panels
-   exist, work with academies in Lima and Miami. These are the only product details used.
+   exist, work with academies in Lima and Miami. Since 2026-11-08 the FAQ also carries the owner's
+   confirmed commercial facts (minimums, lead times, sample and payment terms, DHL, sizes and own patterns).
 4. **Keyword wording.** "Custom fight shorts manufacturer" is not used verbatim. Pages say
    "made in Lima" and "we oversee production", the wording already on the site, and make no
    claim about owning a facility.
