@@ -49,7 +49,7 @@ two disagree):
 - [x] Lead time — answered 2026-11-08 for 12 pieces only (5–7 business days). Still open: larger quantities, US delivery time
 - [x] Samples — answered 2026-11-08 (part of the order; the dozen is charged and credited to the final order). Still open: how long a sample takes
 - [ ] Sizing: size range, kids' sizes, how a size chart is collected
-- [ ] Shipping to the US: how, who pays, duties, typical time
+- [x] Shipping to the US — carrier answered 2026-11-08 (DHL). Still open: who pays, duties, typical time
 - [x] Payment — answered 2026-11-08 (50% at signing, 50% after visual confirmation, design paid up front). Still open: accepted methods, currencies
 - [ ] Which design file formats you accept (add to the "own design" answer)
 

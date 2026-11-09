@@ -11,9 +11,9 @@ Choices made while building the growth and technical-SEO round (branch
    we start"). The gap is marked `TODO(owner)` in an HTML comment (never in visible text, never
    in JSON-LD) and listed in `docs/OWNER-TODO.md`. `scripts/check-site.mjs` fails if
    `TODO(owner)` ever shows up in visible text or structured data.
-2. **FAQ: 12 questions, 10 confirmed (updated 2026-11-08).** Only confirmed answers are in the
-   `FAQPage` JSON-LD. Minimum order, lead time, samples and payment were confirmed by the owner
-   on 2026-11-08. The remaining two (sizing, US shipping) carry `data-todo="owner"` and stay out until
+2. **FAQ: 12 questions, 11 confirmed (updated 2026-11-08).** Only confirmed answers are in the
+   `FAQPage` JSON-LD. Minimum order, lead time, samples, payment and the US carrier (DHL) were confirmed by the owner
+   on 2026-11-08. The remaining one (sizing) carries `data-todo="owner"` and stays out until
    confirmed; the checker enforces that the JSON-LD matches the confirmed set exactly.
 3. **Facts taken from the testimonials page:** kids' rashguards exist, mesh side panels
    exist, work with academies in Lima and Miami. These are the only product details used.
