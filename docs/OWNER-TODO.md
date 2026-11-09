@@ -45,12 +45,12 @@ with the real one, delete `data-todo="owner"` and the comment above it, and add 
 question to the `FAQPage` JSON-LD in `<head>` (`node scripts/check-site.mjs` tells you if the
 two disagree):
 
-- [ ] Minimum order (per product)
-- [ ] Lead time (production + delivery, per product)
-- [ ] Samples: offered? cost? how long?
+- [x] Minimum order — answered 2026-11-08 (Peru 12 per garment; abroad 50 total, min 12 per garment)
+- [x] Lead time — answered 2026-11-08 for 12 pieces only (5–7 business days). Still open: larger quantities, US delivery time
+- [x] Samples — answered 2026-11-08 (part of the order; the dozen is charged and credited to the final order). Still open: how long a sample takes
 - [ ] Sizing: size range, kids' sizes, how a size chart is collected
 - [ ] Shipping to the US: how, who pays, duties, typical time
-- [ ] Payment: deposit, balance, accepted methods, currencies
+- [x] Payment — answered 2026-11-08 (50% at signing, 50% after visual confirmation, design paid up front). Still open: accepted methods, currencies
 - [ ] Which design file formats you accept (add to the "own design" answer)
 
 - [ ] Quality step (`/el-proceso`, step 04): confirm it matches what really happens, or tell us what to change
