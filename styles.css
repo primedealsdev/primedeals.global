@@ -656,8 +656,8 @@ footer a:hover, footer a:focus-visible { color: var(--accent); }
 }
 .block-body { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
 .block p { color: var(--fg-mute); font-size: 15px; line-height: 1.66; margin: 0; max-width: 62ch; }
-.block p a, .faq-item p a { color: var(--fg); text-underline-offset: 4px; text-decoration-color: var(--line); transition: color .2s ease, text-decoration-color .2s ease; }
-.block p a:hover, .block p a:focus-visible, .faq-item p a:hover, .faq-item p a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
+.block p a, .faq-item p a, .subtitulo a { color: var(--fg); text-underline-offset: 4px; text-decoration-color: var(--line); transition: color .2s ease, text-decoration-color .2s ease; }
+.block p a:hover, .block p a:focus-visible, .faq-item p a:hover, .faq-item p a:focus-visible, .subtitulo a:hover, .subtitulo a:focus-visible { color: var(--accent); text-decoration-color: var(--accent); }
 
 .feature-list { list-style: none; padding: 0; margin: 0; max-width: 62ch; }
 .feature-list li {
