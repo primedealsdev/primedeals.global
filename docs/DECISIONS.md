@@ -15,7 +15,8 @@ Choices made while building the growth and technical-SEO round (branch
    `FAQPage` JSON-LD. Minimum order, lead time, samples, payment, the US carrier (DHL) and sizing were confirmed by the owner
    on 2026-11-08. The checker enforces that the JSON-LD matches the confirmed set exactly.
 3. **Facts taken from the testimonials page:** kids' rashguards exist, mesh side panels
-   exist, work with academies in Lima and Miami. These are the only product details used.
+   exist, work with academies in Lima and Miami. Since 2026-11-08 the FAQ also carries the owner's
+   confirmed commercial facts (minimums, lead times, sample and payment terms, DHL, sizes and own patterns).
 4. **Keyword wording.** "Custom fight shorts manufacturer" is not used verbatim. Pages say
    "made in Lima" and "we oversee production", the wording already on the site, and make no
    claim about owning a facility.
