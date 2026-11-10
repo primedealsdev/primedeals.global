@@ -17,7 +17,7 @@
     contact: 'Enter a WhatsApp number or an email address.',
     url: 'Enter a link starting with http:// or https://.',
     intro: 'Hi, I\'d like a quote.',
-    brand: 'Brand/academy', product: 'Product', quantity_l: 'Estimated quantity',
+    brand: 'Brand/academy', product: 'Products', quantity_l: 'Estimated quantity',
     deadline: 'Deadline', files: 'Design files', contact_l: 'Contact',
     subject: 'Quote request: '
   } : {
@@ -27,7 +27,7 @@
     contact: 'Escribe un número de WhatsApp o un correo.',
     url: 'Escribe un enlace que empiece con http:// o https://.',
     intro: 'Hola, quiero una cotización.',
-    brand: 'Marca/academia', product: 'Producto', quantity_l: 'Cantidad aproximada',
+    brand: 'Marca/academia', product: 'Productos', quantity_l: 'Cantidad aproximada',
     deadline: 'Fecha límite', files: 'Archivos de diseño', contact_l: 'Contacto',
     subject: 'Solicitud de cotización: '
   };
@@ -85,8 +85,19 @@
     f.addEventListener('input', function () { if (f.getAttribute('aria-invalid')) check(name); });
   });
 
+  // Analytics gets only a short list of known product codes, never the typed text.
+  function productCodes(text) {
+    var t = text.toLowerCase();
+    var found = [];
+    if (/rash/.test(t)) found.push('rashguards');
+    if (/compres|compression/.test(t)) found.push('compression-shorts');
+    else if (/short/.test(t)) found.push('shorts');
+    if (/legging|spat/.test(t)) found.push('leggings');
+    return found.length ? found.join('+') : 'other';
+  }
+
   function buildMessage() {
-    var productLabel = fields.product.options[fields.product.selectedIndex].text;
+    var productLabel = fields.product.value.trim();
     var lines = [
       T.intro,
       T.brand + ': ' + fields.brand.value.trim(),
@@ -123,7 +134,7 @@
     // No contact details go to analytics, only the shape of the request.
     if (typeof window.pdTrack === 'function') {
       window.pdTrack('quote_submit', {
-        product: fields.product.value,
+        product: productCodes(fields.product.value),
         quantity: parseInt(fields.quantity.value, 10),
         has_deadline: !!fields.deadline.value,
         has_design_link: !!fields.files.value.trim(),
