@@ -45,7 +45,7 @@ with the real one, delete `data-todo="owner"` and the comment above it, and add 
 question to the `FAQPage` JSON-LD in `<head>` (`node scripts/check-site.mjs` tells you if the
 two disagree):
 
-- [x] Minimum order — answered 2026-11-08 (Peru 12 per garment; abroad 50 total, min 12 per garment)
+- [x] Minimum order — answered 2026-11-08 (Peru 12 per garment type; abroad 50 total, min 12 per garment type)
 - [x] Lead time — answered 2026-11-08 (1 dozen 3–5 business days, 2 dozen 5–7, larger about 7–10). Still open: US delivery time
 - [x] Samples — answered 2026-11-08 (part of the order; the dozen is charged and credited to the final order). Still open: how long a sample takes
 - [x] Sizing — answered 2026-11-08 (kids and adult sizes; own patterns, special ones by conversation). Still open: exact size range, size chart
